@@ -1,0 +1,88 @@
+body p,
+body span,
+body h1 {
+    color: white;
+    border-color: #2f2f2f !important;
+}
+
+.followup,
+.followup_reply,
+.gray-bar,
+#feed_search_bar {
+    background-color: black !important;
+}
+
+#qaContentViewId {
+    background-color: black !important;
+    border-color: black !important;
+}
+
+article {
+    background-color: black !important;
+    border-color: black !important;
+    color: white !important;
+}
+
+.questions-and-answers {
+    background-color: #2f2f2f !important;
+}
+
+#post-header {
+    border-color: #2f2f2f !important;
+}
+
+.snippet {
+    color: white !important;
+}
+
+#history_bar {
+    background-color: black;
+}
+
+#content-holder #react_feed #feed_list_wrapper {
+    background-color: black;
+}
+
+.icon-font {
+    color: white !important;
+}
+
+#react_feed {
+    border-right: #2f2f2f !important;
+}
+
+.border-top.container-fluid,
+.border-bottom.container-fluid {
+    border-color: #2f2f2f !important;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    background-color: black;
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #777575;
+}
+
+.form-control {
+    background-color: #2f2f2f !important;
+    color: white !important;
+}
+
+::placeholder {
+    color: #777575 !important;
+}
+
+li.feed_item.selected {
+    background-color: #777575 !important;
+}
+
+.alert.alert-info {
+    background-color: #265983 !important;
+}
+
+
+
+
