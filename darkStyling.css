@@ -1,16 +1,81 @@
+/**********************/
+/* White Text */
 body p,
 body span,
-body h1 {
-    color: white;
-    border-color: #2f2f2f !important;
+body h1,
+.snippet,
+.tox .tox-mbtn,
+.tox :not(svg):not(rect),
+.dropdown-item,
+:root,
+.icon-font,
+article {
+    color: white !important;
 }
 
+
+/**********************/
+/* Black Background */
 .followup,
 .followup_reply,
 .gray-bar,
-#feed_search_bar {
+#feed_search_bar,
+.feed_item,
+.css-13cymwt-control,
+.tox .tox-statusbar,
+.tox :not(svg):not(rect),
+.editor_row .preview_box,
+.dropdown-menu,
+#history_bar,
+#content-holder #react_feed #feed_list_wrapper,
+#topbar #my_class_menu .dropdown-item:not(:hover) {
     background-color: black !important;
 }
+
+
+/**********************/
+/* Dark Grey Background*/
+.questions-and-answers,
+.dropdown-item:hover,
+#react_root .main-content .questions-and-answers #qanda-content.homepage .class-buttons .btn-light:hover {
+    background-color: #2f2f2f !important;
+}
+
+#topbar #my_class_menu .dropdown-item.dark-item#joinAnotherClassId :hover {
+    background-color: #265983 !important;
+}
+
+
+/**********************/
+/* Dark Grey Borders */
+body p,
+body span,
+body h1,
+.border-top.container-fluid,
+.border-bottom.container-fluid,
+.good_post_number,
+#react_feed,
+#post-header,
+#react_root #folder_row .folder-item:after,
+.editor_row .preview_box,
+#react_root #folder_row .more_folders_col:before,
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .feed_item_dropdown_selector>.dropdown-menu>.dropdown-item {
+    border-color: #2f2f2f !important;
+}
+
+#react_feed .page_feed_tool_bar .page_feed_tool_bar_left #hide_feed_button:after,
+#react_feed .page_feed_tool_bar .dropdown #feed_gear_menu_selector:before {
+    background-color: #2f2f2f !important;
+}
+
+/**********************/
+/* Light Grey Text */
+::placeholder,
+#react_root .main-content .questions-and-answers #qanda-content.homepage .class-buttons .btn-light:hover:after {
+    color: #777575 !important;
+}
+
+
 
 #qaContentViewId {
     background-color: black !important;
@@ -20,42 +85,12 @@ body h1 {
 article {
     background-color: black !important;
     border-color: black !important;
-    color: white !important;
 }
 
-.questions-and-answers {
-    background-color: #2f2f2f !important;
-}
 
-#post-header {
-    border-color: #2f2f2f !important;
-}
 
-.snippet {
-    color: white !important;
-}
-
-#history_bar {
-    background-color: black;
-}
-
-#content-holder #react_feed #feed_list_wrapper {
-    background-color: black;
-}
-
-.icon-font {
-    color: white !important;
-}
-
-#react_feed {
-    border-right: #2f2f2f !important;
-}
-
-.border-top.container-fluid,
-.border-bottom.container-fluid {
-    border-color: #2f2f2f !important;
-}
-
+/**********************/
+/* Scrollbar */
 ::-webkit-scrollbar {
     -webkit-appearance: none;
     background-color: black;
@@ -66,23 +101,52 @@ article {
     background-color: #777575;
 }
 
+
+
 .form-control {
     background-color: #2f2f2f !important;
     color: white !important;
+    border-color: black !important;
+    border-radius: 7px !important;
 }
 
-::placeholder {
-    color: #777575 !important;
-}
 
 li.feed_item.selected {
-    background-color: #777575 !important;
+    background-color: #1f1f1f !important;
 }
 
 .alert.alert-info {
     background-color: #265983 !important;
 }
 
+/* question, note, the student's answer, the instructor's answer */
+.main-content .questions-and-answers #qanda-content article #post-header b span,
+.post_number_copy,
+.main-content .questions-and-answers #qanda-content article header h2 {
+    color: #777575 !important;
+}
+
+/* writing a follow up */
+.tox .tox-tbtn svg {
+    fill: white !important;
+}
 
 
+/**********************/
+/* FUN COLOURS */
 
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.instructor_endorsed{
+    color: #a62bbb !important;
+}
+
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.open_teammate_searches {
+    color: #47b6d1 !important;
+}
+
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.unresolved_followups {
+    color: #e92029 !important;
+}
+
+.main-content .questions-and-answers #qanda-content article .sign.red {
+    background-color: #e92029 !important;
+}
