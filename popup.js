@@ -1,8 +1,6 @@
-import {getActiveTabURL} from "./utils.js";
-
 document.addEventListener('DOMContentLoaded', async () => {
     const dialogBox = document.getElementById('dialog-box');
-    const activeTab = await getActiveTabURL();
+    const activeTab = await getActiveTab();
 
     if (activeTab.url.includes("piazza.com")) {
     } else {
@@ -11,23 +9,34 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById("moon").style.display = 'none';
         document.getElementById("toggle").style.display = 'none';
     }
-    // alert('Please work');
 });
 
 document.getElementById("toggleSwitch").addEventListener("click", darken);
 
-function darken(){
+async function darken() {
+    let activeTab = await getActiveTab();
+    console.log(activeTab.id);
+
     if (document.getElementById("toggleSwitch").checked === true) {
-        // alert("DARKNESS IS DESCENDING");
-        const toDarken = document.getElementsByClassName('.gray-bar');
-        console.log(document.body.style.color);
-        document.body.style.color = "pink";
-        console.log(document.body.style.color);
-        console.log(toDarken);
-        toDarken.forEach(e => {
-            e.style.color = 'white';
+        await chrome.scripting.insertCSS({
+            files: ['darkStyling.css'],
+            target: {tabId: activeTab.id}
+        });
+    } else {
+        await chrome.scripting.removeCSS({
+            target: { tabId: activeTab.id},
+            files: ['darkStyling.css']
         });
     }
+}
+
+async function getActiveTab() {
+    const tabs = await chrome.tabs.query({
+        currentWindow: true,
+        active: true
+    });
+
+    return tabs[0];
 }
 
 

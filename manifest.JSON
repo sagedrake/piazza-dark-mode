@@ -8,19 +8,13 @@
     "default_popup": "index.html",
     "default_title": "Piazza Dark Mode"
   },
-  "content_scripts": [
-    {
-      "matches": ["https://piazza.com/*"],
-      "js": ["popup.js"]
-    }
-  ],
   "icons": {
     "16": "images/Logo16.png",
     "48": "images/Logo48.png",
     "128": "images/Logo128.png"
   },
-  "permissions": [
-    "tabs",
-    "activeTab"
-  ]
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "popup.js"
+  }
 }
