@@ -15,13 +15,14 @@ document.getElementById("toggleSwitch").addEventListener("click", darken);
 
 async function darken() {
     let activeTab = await getActiveTab();
-    console.log(activeTab.id);
 
     if (document.getElementById("toggleSwitch").checked === true) {
         await chrome.scripting.insertCSS({
             files: ['darkStyling.css'],
             target: {tabId: activeTab.id}
         });
+
+        await chrome.tabs.sendMessage(activeTab.id, {greeting: "dark"});
     } else {
         await chrome.scripting.removeCSS({
             target: { tabId: activeTab.id},

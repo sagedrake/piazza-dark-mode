@@ -14,7 +14,16 @@
     "128": "images/Logo128.png"
   },
   "permissions": ["activeTab", "scripting"],
-  "background": {
-    "service_worker": "popup.js"
-  }
+  "content_scripts": [
+    {
+      "matches": ["https://piazza.com/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "editingPaneStyling.css" ],
+      "matches": [ "https://piazza.com/*" ]
+    }
+  ]
 }
