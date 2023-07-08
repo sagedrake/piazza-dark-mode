@@ -9,13 +9,14 @@ body h1,
 .dropdown-item,
 :root,
 .icon-font,
-article {
-    color: white !important;
+article,
+.form-control {
+    color: #e7e6e6 !important;
 }
 
 
 /**********************/
-/* Black Background */
+/* Darkest Grey Background */
 .followup,
 .followup_reply,
 .gray-bar,
@@ -28,17 +29,19 @@ article {
 .dropdown-menu,
 #history_bar,
 #content-holder #react_feed #feed_list_wrapper,
-#topbar #my_class_menu .dropdown-item:not(:hover) {
-    background-color: black !important;
+#topbar #my_class_menu .dropdown-item:not(:hover),
+.form-control {
+    background-color: #232323 !important;
 }
 
 
 /**********************/
-/* Dark Grey Background*/
+/* Lighter Grey Background */
 .questions-and-answers,
 .dropdown-item:hover,
-#react_root .main-content .questions-and-answers #qanda-content.homepage .class-buttons .btn-light:hover {
-    background-color: #2f2f2f !important;
+#react_root .main-content .questions-and-answers #qanda-content.homepage .class-buttons .btn-light:hover,
+.modal-content {
+    background-color: #3b3b3b !important;
 }
 
 #topbar #my_class_menu .dropdown-item.dark-item#joinAnotherClassId :hover {
@@ -59,8 +62,9 @@ body h1,
 #react_root #folder_row .folder-item:after,
 .editor_row .preview_box,
 #react_root #folder_row .more_folders_col:before,
-#react_feed #feed_list_wrapper #feed_list ul li.feed_item .feed_item_dropdown_selector>.dropdown-menu>.dropdown-item {
-    border-color: #2f2f2f !important;
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .feed_item_dropdown_selector>.dropdown-menu>.dropdown-item,
+.modal-content {
+    border-color: #484747 !important;
 }
 
 #react_feed .page_feed_tool_bar .page_feed_tool_bar_left #hide_feed_button:after,
@@ -78,13 +82,13 @@ body h1,
 
 
 #qaContentViewId {
-    background-color: black !important;
-    border-color: black !important;
+    background-color: #232323 !important;
+    border-color: #232323 !important;
 }
 
 article {
-    background-color: black !important;
-    border-color: black !important;
+    background-color: #232323 !important;
+    border-color: #232323 !important;
 }
 
 
@@ -93,7 +97,7 @@ article {
 /* Scrollbar */
 ::-webkit-scrollbar {
     -webkit-appearance: none;
-    background-color: black;
+    background-color: #232323;
     width: 15px;
 }
 
@@ -104,9 +108,7 @@ article {
 
 
 .form-control {
-    background-color: #2f2f2f !important;
-    color: white !important;
-    border-color: black !important;
+    border-color: #414040 !important;
     border-radius: 7px !important;
 }
 
@@ -115,8 +117,11 @@ li.feed_item.selected {
     background-color: #1f1f1f !important;
 }
 
-.alert.alert-info {
+.alert.alert-info,
+.alert-warning {
     background-color: #265983 !important;
+    border-color: #265983 !important;
+    color: #e7e6e6 !important;
 }
 
 /* question, note, the student's answer, the instructor's answer */
@@ -128,8 +133,11 @@ li.feed_item.selected {
 
 /* writing a follow up */
 .tox .tox-tbtn svg {
-    fill: white !important;
+    fill: #e7e6e6 !important;
 }
+
+
+
 
 
 /**********************/
