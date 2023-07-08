@@ -10,7 +10,9 @@ body h1,
 :root,
 .icon-font,
 article,
-.form-control {
+.form-control,
+label,
+#create-post #main-post .btn.btn-link-text{
     color: #e7e6e6 !important;
 }
 
@@ -30,7 +32,11 @@ article,
 #history_bar,
 #content-holder #react_feed #feed_list_wrapper,
 #topbar #my_class_menu .dropdown-item:not(:hover),
-.form-control {
+.form-control,
+.bg-white.py-2,
+#create-post,
+.css-t3ipsp-control,
+.create-post__menu {
     background-color: #232323 !important;
 }
 
@@ -40,7 +46,9 @@ article,
 .questions-and-answers,
 .dropdown-item:hover,
 #react_root .main-content .questions-and-answers #qanda-content.homepage .class-buttons .btn-light:hover,
-.modal-content {
+.modal-content,
+li.feed_item.selected,
+.css-d7l1ni-option {
     background-color: #3b3b3b !important;
 }
 
@@ -63,9 +71,21 @@ body h1,
 .editor_row .preview_box,
 #react_root #folder_row .more_folders_col:before,
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .feed_item_dropdown_selector>.dropdown-menu>.dropdown-item,
-.modal-content {
+.modal-content,
+.tox-tinymce,
+.tox-statusbar,
+.tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type),
+.tox .tox-menubar+.tox-toolbar,
+.tox-toolbar__primary {
     border-color: #484747 !important;
 }
+
+.tox-toolbar__primary,
+.tox-toolbar__overflow {
+    border-bottom: 1px solid #484747 !important;
+    background: none !important;
+}
+
 
 #react_feed .page_feed_tool_bar .page_feed_tool_bar_left #hide_feed_button:after,
 #react_feed .page_feed_tool_bar .dropdown #feed_gear_menu_selector:before {
@@ -75,7 +95,11 @@ body h1,
 /**********************/
 /* Light Grey Text */
 ::placeholder,
-#react_root .main-content .questions-and-answers #qanda-content.homepage .class-buttons .btn-light:hover:after {
+#react_root .main-content .questions-and-answers #qanda-content.homepage .class-buttons .btn-light:hover:after,
+.main-content .questions-and-answers #qanda-content article #post-header b span,
+.post_number_copy,
+.main-content .questions-and-answers #qanda-content article header h2,
+.css-1dimb5e-singleValue {
     color: #777575 !important;
 }
 
@@ -106,17 +130,16 @@ article {
 }
 
 
-
+/**********************/
+/* Search bar, and other places you click to type */
 .form-control {
     border-color: #414040 !important;
     border-radius: 7px !important;
 }
 
 
-li.feed_item.selected {
-    background-color: #1f1f1f !important;
-}
-
+/**********************/
+/* Alerts like "this class has been made inactive" */
 .alert.alert-info,
 .alert-warning {
     background-color: #265983 !important;
@@ -124,12 +147,11 @@ li.feed_item.selected {
     color: #e7e6e6 !important;
 }
 
-/* question, note, the student's answer, the instructor's answer */
-.main-content .questions-and-answers #qanda-content article #post-header b span,
-.post_number_copy,
-.main-content .questions-and-answers #qanda-content article header h2 {
-    color: #777575 !important;
+.alert.alert-warning.border {
+    background-color: #888209 !important;
+    color: #e7e6e6 !important;
 }
+
 
 /* writing a follow up */
 .tox .tox-tbtn svg {
@@ -143,7 +165,8 @@ li.feed_item.selected {
 /**********************/
 /* FUN COLOURS */
 
-#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.instructor_endorsed{
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.instructor_endorsed,
+.instructor-endorsement {
     color: #a62bbb !important;
 }
 
@@ -158,3 +181,5 @@ li.feed_item.selected {
 .main-content .questions-and-answers #qanda-content article .sign.red {
     background-color: #e92029 !important;
 }
+
+
