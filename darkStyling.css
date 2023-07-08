@@ -12,7 +12,9 @@ body h1,
 article,
 .form-control,
 label,
-#create-post #main-post .btn.btn-link-text{
+#create-post #main-post .btn.btn-link-text,
+#latexTextArea,
+#latexPreviewRender {
     color: #e7e6e6 !important;
 }
 
@@ -36,7 +38,10 @@ label,
 .bg-white.py-2,
 #create-post,
 .css-t3ipsp-control,
-.create-post__menu {
+.create-post__menu,
+.modal-content,
+.modal-footer,
+#latexTextArea {
     background-color: #232323 !important;
 }
 
@@ -46,9 +51,9 @@ label,
 .questions-and-answers,
 .dropdown-item:hover,
 #react_root .main-content .questions-and-answers #qanda-content.homepage .class-buttons .btn-light:hover,
-.modal-content,
 li.feed_item.selected,
-.css-d7l1ni-option {
+.css-d7l1ni-option,
+.css-1nmdiq5-menu {
     background-color: #3b3b3b !important;
 }
 
@@ -76,7 +81,9 @@ body h1,
 .tox-statusbar,
 .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type),
 .tox .tox-menubar+.tox-toolbar,
-.tox-toolbar__primary {
+.tox-toolbar__primary,
+.modal-footer,
+.modal-footer {
     border-color: #484747 !important;
 }
 
@@ -99,7 +106,8 @@ body h1,
 .main-content .questions-and-answers #qanda-content article #post-header b span,
 .post_number_copy,
 .main-content .questions-and-answers #qanda-content article header h2,
-.css-1dimb5e-singleValue {
+.css-1dimb5e-singleValue,
+.css-1nmdiq5-menu {
     color: #777575 !important;
 }
 
