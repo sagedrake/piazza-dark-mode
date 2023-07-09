@@ -1,18 +1,7 @@
-//  alert('hi, this is the content script speaking!');
-
-
-
-// console.log(document.getElementById("s_answer_edit_ifr").contentWindow.document.getElementsByTagName(p).style);
-
-// let elements = document.getElementById("s_answer_edit_ifr").contentWindow.document.getElementsByTagName('p');
-
-// for (let x in elements) {
-  //  console.log(x.style);
-// }
-
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         if (request.greeting === "dark") {
+
             const cssLink = document.createElement("link");
             cssLink.href = chrome.runtime.getURL("editingPaneStyling.css");
             cssLink.rel = "stylesheet";
