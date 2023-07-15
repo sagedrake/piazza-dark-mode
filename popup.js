@@ -28,14 +28,9 @@ async function changeMode() {
 
     if (document.getElementById("toggleSwitch").checked === true) {
 
-        /*
-        await chrome.scripting.insertCSS({
-            files: ['darkStyling.css'],
-            target: {tabId: activeTab.id}
-        });
-        */
-
+        // message to content-script.js
         await chrome.tabs.sendMessage(activeTab.id, {greeting: "dark"});
+        // message to background.js
         await chrome.runtime.sendMessage("darken");
 
         chrome.storage.local.set({ mode: "DARK" }).then(() => {
@@ -43,12 +38,6 @@ async function changeMode() {
         });
 
     } else {
-        /*
-        await chrome.scripting.removeCSS({
-            target: { tabId: activeTab.id},
-            files: ['darkStyling.css']
-        });
-        */
         await chrome.runtime.sendMessage("lighten");
 
         chrome.storage.local.set({ mode: "LIGHT" }).then(() => {

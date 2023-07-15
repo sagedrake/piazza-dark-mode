@@ -1,10 +1,9 @@
 chrome.tabs.onUpdated.addListener(async function (tabId, info) {
+    const activeTab = await getActiveTab();
     if (info.status === 'loading') {
 
-        const activeTab = await getActiveTab();
-
         if (activeTab.url.includes("piazza.com")) {
-            chrome.storage.local.get(["mode"]).then((result) => {
+            chrome.storage.local.get(["mode"]).then( (result) => {
 
                 // set toggle to be initially on if mode is currently set to DARK
                 if (result.mode === "DARK") {
@@ -12,6 +11,8 @@ chrome.tabs.onUpdated.addListener(async function (tabId, info) {
                 }
             });
         }
+    } else if (info.status === 'complete') {
+        await chrome.tabs.sendMessage(activeTab.id, {greeting: "dark"})
     }
 });
 
