@@ -1,20 +1,26 @@
-console.log('heyyyy');
+function addListeners() {
+    // wait 1 second, then add event listeners to elements that will open editing panes when clicked
+    // the 1-second delay is needed because these elements might not exist until some milliseconds after the site loads
+    setTimeout( function() {
+        if (document.getElementById('s_answerPlaceholderId') != null) {
+            document.getElementById('s_answerPlaceholderId').addEventListener("mousedown", clicked);
+        }
+        if (document.getElementById('followup-box') != null) {
+            document.getElementById('followup-box').addEventListener("mousedown", clicked);
+        }
+        let replyButtons = document.querySelectorAll('input[data-id^="followup_reply_id"]');
+        replyButtons.forEach(function(button) {
+            button.addEventListener('mousedown', clicked);
+        });
+    }, 1000)
+}
 
-
-// wait 1 second, then add event listeners to elements that will open editing panes when clicked
-// te 1-second delay is needed because these elements might not exist until some milliseconds after the site loads
-setTimeout( function() {
-    if (document.getElementById('s_answerPlaceholderId') != null) {
-        document.getElementById('s_answerPlaceholderId').addEventListener("mousedown", clicked);
+chrome.storage.local.get(["mode"]).then( (result) => {
+    // set toggle to be initially on if mode is currently set to DARK
+    if (result.mode === "DARK") {
+        addListeners();
     }
-    if (document.getElementById('followup-box') != null) {
-        document.getElementById('followup-box').addEventListener("mousedown", clicked);
-    }
-    let replyButtons = document.querySelectorAll('input[data-id^="followup_reply_id"]');
-    replyButtons.forEach(function(button) {
-        button.addEventListener('mousedown', clicked);
-    });
-}, 1000)
+});
 
 
 chrome.runtime.onMessage.addListener(
