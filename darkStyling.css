@@ -14,7 +14,9 @@ article,
 label,
 #create-post #main-post .btn.btn-link-text,
 #latexTextArea,
-#latexPreviewRender {
+#latexPreviewRender,
+#qanda-content #teammates .group_details,
+.responses.text-black-50 {
     color: #e7e6e6 !important;
 }
 
@@ -41,7 +43,13 @@ label,
 .create-post__menu,
 .modal-content,
 .modal-footer,
-#latexTextArea {
+#latexTextArea,
+div[class*="css"][class$="menu"],
+#qanda-content #teammates .new_post,
+#qanda-content #teammates #teammates_head_row .col,
+#qanda-content #teammates #teammates_head_row .first_col,
+#qanda-content #teammates .responses .write_response,
+#qanda-content #teammates .responses .response {
     background-color: #232323 !important;
 }
 
@@ -83,7 +91,8 @@ body h1,
 .tox .tox-menubar+.tox-toolbar,
 .tox-toolbar__primary,
 .modal-footer,
-.modal-footer {
+.modal-footer,
+#qanda-content #teammates .teammates_row {
     border-color: #484747 !important;
 }
 
