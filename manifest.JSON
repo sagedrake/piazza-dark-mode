@@ -4,10 +4,6 @@
   "description": "Puts Piazza.com in dark mode to save your eyes",
   "manifest_version": 3,
   "author": "Sage Drake",
-  "action": {
-    "default_popup": "index.html",
-    "default_title": "Piazza Dark Mode"
-  },
   "icons": {
     "16": "images/Logo16.png",
     "48": "images/Logo48.png",
@@ -20,7 +16,8 @@
   "content_scripts": [
     {
       "matches": ["https://piazza.com/*"],
-      "js": ["content-script.js"]
+      "js": ["content-script.js"],
+      "css": ["darkStyling.css"]
     }
   ],
   "background": {
