@@ -1,10 +1,19 @@
-// runs when piazza site loads
-chrome.storage.local.get(["mode"]).then( (result) => {
-    // set toggle to be initially on if mode is currently set to DARK
-    if (result.mode === "DARK") {
+// runs when message received from background.js or popup.js
+chrome.runtime.onMessage.addListener(
+    function(request, sender, sendResponse) {
         addListeners();
+        if (request.greeting === "dark") {
+            setTimeout(function() {
+                darkenEditingPanes();
+            }, 100);
+            setTimeout(function() {
+                darkenEditingPanes();
+            }, 1000);
+            sendResponse({farewell: "goodbye"});
+        }
     }
-});
+);
+
 
 function addListeners() {
     // wait 1 second, then add event listeners to elements that will open editing panes when clicked
@@ -28,22 +37,6 @@ function addListeners() {
 
     }, 1000)
 }
-
-
-// runs when message received from background.js or popup.js
-chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-        if (request.greeting === "dark") {
-            setTimeout(function() {
-                darkenEditingPanes();
-            }, 100);
-            setTimeout(function() {
-                darkenEditingPanes();
-            }, 1000);
-            sendResponse({farewell: "goodbye"});
-        }
-    }
-);
 
 function editingPaneInitializerClicked() {
     console.log('editing button clicked');
