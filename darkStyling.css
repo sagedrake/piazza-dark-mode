@@ -52,6 +52,11 @@ div[class*="css"][class$="menu"],
 #qanda-content #teammates .responses .response {
     background-color: #232323 !important;
 }
+#qaContentViewId,
+article {
+    background-color: #232323 !important;
+    border-color: #232323 !important;
+}
 
 
 /**********************/
@@ -63,10 +68,6 @@ li.feed_item.selected,
 .css-d7l1ni-option,
 .css-1nmdiq5-menu {
     background-color: #3b3b3b !important;
-}
-
-#topbar #my_class_menu .dropdown-item.dark-item#joinAnotherClassId :hover {
-    background-color: #265983 !important;
 }
 
 
@@ -102,11 +103,12 @@ body h1,
     background: none !important;
 }
 
-
 #react_feed .page_feed_tool_bar .page_feed_tool_bar_left #hide_feed_button:after,
 #react_feed .page_feed_tool_bar .dropdown #feed_gear_menu_selector:before {
-    background-color: #2f2f2f !important;
+    background-color: #484747 !important;
 }
+
+
 
 /**********************/
 /* Light Grey Text */
@@ -122,17 +124,6 @@ body h1,
 
 
 
-#qaContentViewId {
-    background-color: #232323 !important;
-    border-color: #232323 !important;
-}
-
-article {
-    background-color: #232323 !important;
-    border-color: #232323 !important;
-}
-
-
 
 /**********************/
 /* Scrollbar */
@@ -141,7 +132,6 @@ article {
     background-color: #232323;
     width: 15px;
 }
-
 ::-webkit-scrollbar-thumb {
     background-color: #777575;
 }
@@ -170,13 +160,18 @@ article {
 }
 
 
-/* writing a follow up */
+/**********************/
+/* White icons */
 .tox .tox-tbtn svg {
     fill: #e7e6e6 !important;
 }
 
 
-
+/**********************/
+/* Join Another Class Button */
+#topbar #my_class_menu .dropdown-item.dark-item#joinAnotherClassId :hover {
+    background-color: #265983 !important;
+}
 
 
 /**********************/

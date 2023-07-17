@@ -1,4 +1,4 @@
-// runs when message received from background.js or popup.js
+// runs when message received from background.js
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         addListeners();

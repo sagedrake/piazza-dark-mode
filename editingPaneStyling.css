@@ -1,3 +1,7 @@
 p {
     color: white !important;
 }
+
+[style] {
+    background: none !important;
+}
