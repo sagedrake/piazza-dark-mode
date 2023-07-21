@@ -2,7 +2,7 @@
 chrome.tabs.onUpdated.addListener(async function (tabId, info) {
     const activeTab = await getActiveTab();
 
-    if (info.status === 'complete') {
+    if (info.status === 'complete' && activeTab.url.includes("piazza.com")) {
         await chrome.tabs.sendMessage(activeTab.id, {greeting: "dark"})
     }
 });

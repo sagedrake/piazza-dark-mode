@@ -12,8 +12,8 @@ chrome.runtime.onMessage.addListener(
             setTimeout(function() {
                 darkenEditingPanes();
             }, 1000);
-            sendResponse({farewell: "goodbye"});
         }
+        sendResponse({farewell: "goodbye"});
     }
 );
 
