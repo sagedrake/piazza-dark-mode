@@ -1,7 +1,10 @@
-// runs when message received from background.js
+// Run when message received from background.js, indicating that current tab was just updated
+//       "Updated" include opened for the first time, reloaded, or URL changed
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         addListeners();
+
+        // if message greeting is "dark", darken any editing panes that are already open
         if (request.greeting === "dark") {
             setTimeout(function() {
                 darkenEditingPanes();
@@ -15,10 +18,15 @@ chrome.runtime.onMessage.addListener(
 );
 
 
+// Add event listeners to elements that will open editing panes when clicked
 function addListeners() {
-    // wait 1 second, then add event listeners to elements that will open editing panes when clicked
+    // wait 1 second, then add event listeners
     // the 1-second delay is needed because these elements might not exist until some milliseconds after the site loads
     setTimeout( function() {
+
+        // it's necessary to know when these editing panes are created because they are html documents within iframes,
+        //    and style tags must be added to them after creation in order to make their text white
+
         if (document.getElementById('s_answerPlaceholderId') != null) {
             document.getElementById('s_answerPlaceholderId').addEventListener("mousedown", editingPaneInitializerClicked);
         }
@@ -38,16 +46,19 @@ function addListeners() {
     }, 1000)
 }
 
+// Darken any editing panes that are open after a time delay
 function editingPaneInitializerClicked() {
-    console.log('editing button clicked');
+    // 100ms delay is so editing panes that load quickly will immediately have the right styling
     setTimeout(function() {
         darkenEditingPanes();
     }, 100);
+    // 1000ms delay is so editing panes that do not load quickly will also be styled correctly with some potential delay
     setTimeout(function() {
         darkenEditingPanes();
     }, 1000);
 }
 
+// Darken any editing panes that are open
 function darkenEditingPanes() {
     const cssLink = document.createElement("link");
     cssLink.href = chrome.runtime.getURL("editingPaneStyling.css");

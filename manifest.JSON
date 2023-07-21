@@ -9,7 +9,7 @@
     "48": "images/Logo48.png",
     "128": "images/Logo128.png"
   },
-  "permissions": ["activeTab", "scripting", "storage", "tabs"],
+  "permissions": ["activeTab", "scripting", "tabs"],
   "host_permissions": [
     "https://piazza.com/*"
   ],

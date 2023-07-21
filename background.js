@@ -1,3 +1,4 @@
+// Send message to content-script.js when any tab is updated
 chrome.tabs.onUpdated.addListener(async function (tabId, info) {
     const activeTab = await getActiveTab();
 
@@ -6,6 +7,7 @@ chrome.tabs.onUpdated.addListener(async function (tabId, info) {
     }
 });
 
+// Return the active tab
 async function getActiveTab() {
     const tabs = await chrome.tabs.query({
         currentWindow: true,
