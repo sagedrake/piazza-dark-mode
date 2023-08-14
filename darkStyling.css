@@ -66,7 +66,8 @@ article {
 #react_root .main-content .questions-and-answers #qanda-content.homepage .class-buttons .btn-light:hover,
 li.feed_item.selected,
 .css-d7l1ni-option,
-.css-1nmdiq5-menu {
+.css-1nmdiq5-menu,
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content .title .private-icon {
     background-color: #3b3b3b !important;
 }
 
