@@ -16,7 +16,9 @@ label,
 #latexTextArea,
 #latexPreviewRender,
 #qanda-content #teammates .group_details,
-.responses.text-black-50 {
+.responses.text-black-50,
+pre,
+body .render-html-content code {
     color: #e7e6e6 !important;
 }
 
@@ -67,7 +69,10 @@ article {
 li.feed_item.selected,
 .css-d7l1ni-option,
 .css-1nmdiq5-menu,
-#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content .title .private-icon {
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content .title .private-icon,
+#topbar #my_class_menu .dropdown-item .top_bar_notification,
+kbd,
+pre {
     background-color: #3b3b3b !important;
 }
 
@@ -119,7 +124,8 @@ body h1,
 .post_number_copy,
 .main-content .questions-and-answers #qanda-content article header h2,
 .css-1dimb5e-singleValue,
-.css-1nmdiq5-menu {
+.css-1nmdiq5-menu,
+strong {
     color: #777575 !important;
 }
 
