@@ -1,0 +1,26 @@
+
+/* Darkest Grey Backgrounds */
+#topbar .dropdown .dropdown-menu .dark-item.dropdown-item,
+.card,
+body #classEmailSettingsId .class-box {
+    background-color: #232323 !important;
+}
+
+
+/* Lighter Grey Backgrounds */
+body {
+    background: #313131 !important;
+}
+
+
+/* White Text */
+body {
+    color: #e7e6e6 !important;
+}
+
+/* Grey Borders */
+.border.rounded,
+.border-bottom.row,
+body .card .focusable {
+    border-color: #3b3b3b !important;
+}

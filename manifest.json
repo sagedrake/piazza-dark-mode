@@ -15,6 +15,10 @@
       "matches": ["https://piazza.com/*"],
       "js": ["content-script.js"],
       "css": ["darkStyling.css"]
+    },
+    {
+      "matches": ["https://piazza.com/account_settings*"],
+      "css": ["settings.css"]
     }
   ],
   "background": {
