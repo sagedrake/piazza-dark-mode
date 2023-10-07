@@ -2,25 +2,35 @@
 /* Darkest Grey Backgrounds */
 #topbar .dropdown .dropdown-menu .dark-item.dropdown-item,
 .card,
-body #classEmailSettingsId .class-box {
+body #classEmailSettingsId .class-box,
+.form-control {
     background-color: #232323 !important;
 }
 
 
 /* Lighter Grey Backgrounds */
-body {
+body,
+.custom-control-label::before {
     background: #313131 !important;
 }
 
 
 /* White Text */
-body {
+body,
+.form-control,
+.helper-text,
+body .required-fields,
+#react_root .btn:disabled.btn-outline-secondary {
     color: #e7e6e6 !important;
 }
 
 /* Grey Borders */
 .border.rounded,
 .border-bottom.row,
+.form-control,
+body #classEmailSettingsId .color-picker-dropdown .btn-primary {
+    border-color: #595959 !important;
+}
 body .card .focusable {
-    border-color: #3b3b3b !important;
+    border-bottom-color: #595959 !important;
 }
