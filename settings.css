@@ -3,14 +3,27 @@
 #topbar .dropdown .dropdown-menu .dark-item.dropdown-item,
 .card,
 body #classEmailSettingsId .class-box,
-.form-control {
+.form-control,
+.smart-digest-select .bs-rs__control.bs-rs__control--is-disabled,
+.bs-rs__control,
+.bs-rs__menu,
+.modal-content,
+input.form-control:focus,
+.dropdown-menu,
+#topbar #my_class_menu .dropdown-item:not(:hover),
+#react_root #topbar .dropdown .dropdown-menu .dark-item.dropdown-item {
     background-color: #232323 !important;
 }
 
 
+
 /* Lighter Grey Backgrounds */
 body,
-.custom-control-label::before {
+.custom-control-label::before,
+.bs-rs__option--is-focused,
+#react_root #topbar #my_class_menu .dropdown-item.dark-item.border-top:hover,
+#topbar #my_class_menu .dropdown-item .top_bar_notification,
+.dropdown-item:hover {
     background: #313131 !important;
 }
 
@@ -20,7 +33,12 @@ body,
 .form-control,
 .helper-text,
 body .required-fields,
-#react_root .btn:disabled.btn-outline-secondary {
+#react_root .btn:disabled.btn-outline-secondary,
+.bs-rs__single-value,
+body h1,
+.table,
+.dropdown-item,
+#topbar #my_class_menu .dropdown-item .top_bar_notification {
     color: #e7e6e6 !important;
 }
 
@@ -28,9 +46,23 @@ body .required-fields,
 .border.rounded,
 .border-bottom.row,
 .form-control,
-body #classEmailSettingsId .color-picker-dropdown .btn-primary {
+body #classEmailSettingsId .color-picker-dropdown .btn-primary,
+.smart-digest-select .bs-rs__control.bs-rs__control--is-disabled,
+.bs-rs__control,
+.col.border-bottom,
+.modal-header,
+.modal-footer {
     border-color: #595959 !important;
 }
 body .card .focusable {
     border-bottom-color: #595959 !important;
+}
+.bs-rs__menu {
+    border: 1px solid #595959 !important;
+}
+
+
+/* Blue Backgrounds */
+.bs-rs__option--is-selected {
+    background: #2684FF !important;
 }
