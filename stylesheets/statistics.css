@@ -13,8 +13,7 @@
 
 /* White Text */
 .nav-tabs .nav-link.active,
-#qanda-content #stats-view .glance-value,
-.table {
+#qanda-content #stats-view .glance-value {
     color: #e7e6e6 !important;
 }
 

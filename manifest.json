@@ -1,6 +1,6 @@
 {
   "name": "Piazza Dark Mode",
-  "version": "1.4.0",
+  "version": "1.4.2",
   "description": "Puts Piazza.com in dark mode to save your eyes",
   "manifest_version": 3,
   "author": "Sage Drake",
@@ -14,15 +14,19 @@
     {
       "matches": ["https://piazza.com/class/*"],
       "js": ["content-script.js"],
-      "css": ["darkStyling.css"]
+      "css": ["stylesheets/q&a.css", "stylesheets/all-piazza-pages.css"]
     },
     {
       "matches": ["https://piazza.com/account_settings*"],
-      "css": ["settings.css"]
+      "css": ["stylesheets/settings.css", "stylesheets/all-piazza-pages.css"]
+    },
+    {
+      "matches": ["https://piazza.com/*/resources", "https://piazza.com/*/staff", "https://piazza.com/*/info"],
+      "css": ["stylesheets/resources.css", "stylesheets/all-piazza-pages.css"]
     },
     {
       "matches": ["https://piazza.com/class/*/stats"],
-      "css": ["statistics.css"]
+      "css": ["stylesheets/statistics.css", "stylesheets/all-piazza-pages.css"]
     }
   ],
   "background": {
@@ -30,7 +34,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": [ "editingPaneStyling.css" ],
+      "resources": [ "stylesheets/editing-panes.css" ],
       "matches": [ "https://piazza.com/*" ]
     }
   ]

@@ -1,16 +1,12 @@
 /**********************/
 /* White Text */
-body p,
 body span,
-body h1,
 .snippet,
 .tox .tox-mbtn,
 .tox :not(svg):not(rect),
-.dropdown-item,
 :root,
 .icon-font,
 article,
-.form-control,
 label,
 #create-post #main-post .btn.btn-link-text,
 #latexTextArea,
@@ -18,7 +14,8 @@ label,
 #qanda-content #teammates .group_details,
 .responses.text-black-50,
 pre,
-body .render-html-content code {
+body .render-html-content code,
+strong {
     color: #e7e6e6 !important;
 }
 
@@ -34,16 +31,12 @@ body .render-html-content code {
 .tox .tox-statusbar,
 .tox :not(svg):not(rect),
 .editor_row .preview_box,
-.dropdown-menu,
 #history_bar,
 #content-holder #react_feed #feed_list_wrapper,
-#topbar #my_class_menu .dropdown-item:not(:hover),
-.form-control,
 .bg-white.py-2,
 #create-post,
 .css-t3ipsp-control,
 .create-post__menu,
-.modal-content,
 .modal-footer,
 #latexTextArea,
 div[class*="css"][class$="menu"],
@@ -70,7 +63,6 @@ li.feed_item.selected,
 .css-d7l1ni-option,
 .css-1nmdiq5-menu,
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .content .title .private-icon,
-#topbar #my_class_menu .dropdown-item .top_bar_notification,
 kbd,
 pre {
     background-color: #3b3b3b !important;
@@ -97,8 +89,6 @@ body h1,
 .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type),
 .tox .tox-menubar+.tox-toolbar,
 .tox-toolbar__primary,
-.modal-footer,
-.modal-footer,
 #qanda-content #teammates .teammates_row {
     border-color: #484747 !important;
 }
@@ -124,24 +114,10 @@ body h1,
 .post_number_copy,
 .main-content .questions-and-answers #qanda-content article header h2,
 .css-1dimb5e-singleValue,
-.css-1nmdiq5-menu,
-strong {
+.css-1nmdiq5-menu {
     color: #777575 !important;
 }
 
-
-
-
-/**********************/
-/* Scrollbar */
-::-webkit-scrollbar {
-    -webkit-appearance: none;
-    background-color: #232323;
-    width: 15px;
-}
-::-webkit-scrollbar-thumb {
-    background-color: #777575;
-}
 
 
 /**********************/
@@ -151,20 +127,6 @@ strong {
     border-radius: 7px !important;
 }
 
-
-/**********************/
-/* Alerts like "this class has been made inactive" */
-.alert.alert-info,
-.alert-warning {
-    background-color: #265983 !important;
-    border-color: #265983 !important;
-    color: #e7e6e6 !important;
-}
-
-.alert.alert-warning.border {
-    background-color: #888209 !important;
-    color: #e7e6e6 !important;
-}
 
 
 /**********************/
@@ -186,7 +148,7 @@ strong {
 
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.instructor_endorsed,
 .instructor-endorsement {
-    color: #a62bbb !important;
+    color: #f69b51 !important;
 }
 
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.open_teammate_searches {
