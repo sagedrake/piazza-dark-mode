@@ -9,7 +9,7 @@ You can find the **Piazza Dark Mode Chrome** extension on the Chrome web store
 
 
 ## Features
-The extension currently includes dark styling of all relevant elements in the Q&A page. The background is different
+The extension currently includes dark styling of all relevant elements in the Q&A, settings, and statistics pages. The background is different
 shades of dark grey, and the text is off-white or light grey. 
 
 There's currently no popup window and Piazza will have a dark colour scheme as long as the extension is added to Chrome
@@ -22,8 +22,8 @@ and enabled.
 ![Example image of Piazza.com with Piazza Dark Mode enabled](images/darkModeExample.png)
 
 Coming soon...
-- Dark styling of settings, login, and statistics pages
-- Popup window with a toggle to switch between light and dark modes
+- Dark styling of login page
+- Toggle feature to switch between light and dark modes
 
 
 
