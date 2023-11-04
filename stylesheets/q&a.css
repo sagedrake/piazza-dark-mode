@@ -1,5 +1,6 @@
 /**********************/
 /* White Text */
+body,
 body span,
 .snippet,
 .tox .tox-mbtn,
@@ -15,7 +16,9 @@ label,
 .responses.text-black-50,
 pre,
 body .render-html-content code,
-strong {
+strong,
+#main-post .helper-text.no-margin,
+.css-1dimb5e-singleValue {
     color: #e7e6e6 !important;
 }
 
@@ -44,7 +47,11 @@ div[class*="css"][class$="menu"],
 #qanda-content #teammates #teammates_head_row .col,
 #qanda-content #teammates #teammates_head_row .first_col,
 #qanda-content #teammates .responses .write_response,
-#qanda-content #teammates .responses .response {
+#qanda-content #teammates .responses .response,
+#similar-posts li,
+.similar-posts,
+.popover-header,
+.popover {
     background-color: #232323 !important;
 }
 #qaContentViewId,
@@ -89,8 +96,16 @@ body h1,
 .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type),
 .tox .tox-menubar+.tox-toolbar,
 .tox-toolbar__primary,
-#qanda-content #teammates .teammates_row {
+#qanda-content #teammates .teammates_row,
+.css-13cymwt-control,
+#feed_gear_menu,
+.similar-posts,
+.popover-header,
+.popover {
     border-color: #484747 !important;
+}
+.bs-popover-right>.arrow::after, .bs-popover-auto[x-placement^=right]>.arrow::after {
+    border-right-color: #484747 !important;
 }
 
 .tox-toolbar__primary,
@@ -113,9 +128,10 @@ body h1,
 .main-content .questions-and-answers #qanda-content article #post-header b span,
 .post_number_copy,
 .main-content .questions-and-answers #qanda-content article header h2,
-.css-1dimb5e-singleValue,
-.css-1nmdiq5-menu {
-    color: #777575 !important;
+.css-1nmdiq5-menu,
+.main-content .questions-and-answers #qanda-content article footer .update_text,
+#react_feed .page_feed_tool_bar .page_feed_tool_bar_left #feed_filter_buttons .feed_filter_button {
+    color: #9f9d9d !important;
 }
 
 
@@ -123,7 +139,7 @@ body h1,
 /**********************/
 /* Search bar, and other places you click to type */
 .form-control {
-    border-color: #414040 !important;
+    border-color: #484747 !important;
     border-radius: 7px !important;
 }
 
@@ -140,6 +156,35 @@ body h1,
 /* Join Another Class Button */
 #topbar #my_class_menu .dropdown-item.dark-item#joinAnotherClassId :hover {
     background-color: #265983 !important;
+}
+
+
+/******************************/
+/* Grey buttons */
+.row .btn.btn-light {
+    background-color: #484747 !important;
+    border-color: #484747 !important;
+    color: #e7e6e6 !important;
+}
+.row .btn.btn-light:hover {
+    background-color: #3b3b3b !important;
+    border-color: #3b3b3b !important;
+    color: #e7e6e6 !important;
+}
+
+/******************************/
+/* Blue buttons/icons with white text */
+.main-content .questions-and-answers #qanda-content article .btn-action {
+    color: #e7e6e6 !important;
+    background-color: #305f85 !important;
+    border-color: #305f85 !important;
+}
+
+
+/**********************************************/
+/* Links */
+#similar-posts li a {
+    color: #5d9acb !important;
 }
 
 
@@ -162,5 +207,8 @@ body h1,
 .main-content .questions-and-answers #qanda-content article .sign.red {
     background-color: #e92029 !important;
 }
+
+
+
 
 

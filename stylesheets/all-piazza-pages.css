@@ -33,7 +33,8 @@ body h2,
     /**********************/
 /* Dark Grey Borders */
 .form-control,
-.modal-footer {
+.modal-footer,
+.modal-header {
     border-color: #595959 !important;
 }
 
