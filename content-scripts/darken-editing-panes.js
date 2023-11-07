@@ -6,6 +6,7 @@ chrome.runtime.onMessage.addListener(
 
         // if message greeting is "dark", darken any editing panes that are already open
         if (request.greeting === "dark") {
+
             setTimeout(function() {
                 darkenEditingPanes();
             }, 100);
@@ -16,6 +17,7 @@ chrome.runtime.onMessage.addListener(
         sendResponse({farewell: "goodbye"});
     }
 );
+
 
 
 // Add event listeners to elements that will open editing panes when clicked
@@ -61,7 +63,7 @@ function editingPaneInitializerClicked() {
 // Darken any editing panes that are open
 function darkenEditingPanes() {
     const cssLink = document.createElement("link");
-    cssLink.href = chrome.runtime.getURL("editingPaneStyling.css");
+    cssLink.href = chrome.runtime.getURL("stylesheets/editing-panes.css");
     cssLink.rel = "stylesheet";
     cssLink.type = "text/css";
 
