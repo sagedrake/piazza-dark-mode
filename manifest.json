@@ -1,6 +1,6 @@
 {
   "name": "Piazza Dark Mode",
-  "version": "1.4.2",
+  "version": "2.0.0",
   "description": "Puts Piazza.com in dark mode to save your eyes",
   "manifest_version": 3,
   "author": "Sage Drake",
@@ -9,29 +9,24 @@
     "48": "images/Logo48.png",
     "128": "images/Logo128.png"
   },
-  "permissions": ["tabs"],
+  "permissions": ["tabs", "storage"],
   "content_scripts": [
     {
       "matches": ["https://piazza.com/class/*"],
-      "js": ["content-scripts/darken-editing-panes.js"]
+      "js": ["content-scripts/q&a-editing-panes.js"]
     },
     {
-      "js": [ "content-scripts/darken-settings-page.js", "content-scripts/darken-page.js" ],
+      "js": [ "content-scripts/settings-page.js","content-scripts/common-page-elements.js" ],
       "matches": ["https://piazza.com/account_settings*"],
       "run_at": "document_start"
     },
     {
-      "js": [ "content-scripts/darken-resources-page.js", "content-scripts/darken-page.js" ],
+      "js": [ "content-scripts/resources-page.js" ,"content-scripts/common-page-elements.js" ],
       "matches": ["https://piazza.com/*/resources", "https://piazza.com/*/staff", "https://piazza.com/*/info"],
       "run_at": "document_start"
     },
     {
-      "js": [ "content-scripts/darken-stats-page.js", "content-scripts/darken-page.js" ],
-      "matches": ["https://piazza.com/class/*/stats"],
-      "run_at": "document_start"
-    },
-    {
-      "js": [ "content-scripts/darken-q&a-page.js", "content-scripts/darken-page.js" ],
+      "js": [ "content-scripts/q&a-page.js","content-scripts/common-page-elements.js" ],
       "matches": [ "https://piazza.com/class/*" ],
       "run_at": "document_start"
     }
@@ -42,8 +37,8 @@
   "web_accessible_resources": [
     {
       "resources": [ "stylesheets/editing-panes.css", "stylesheets/q&a.css",
-        "stylesheets/all-piazza-pages.css", "stylesheets/settings.css", "stylesheets/resources.css",
-        "stylesheets/statistics.css"],
+        "stylesheets/common-page-elements.css", "stylesheets/settings.css", "stylesheets/resources.css",
+        "images/sun.png", "images/moon.png"],
       "matches": [ "https://piazza.com/*" ]
     }
   ]

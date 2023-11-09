@@ -4,16 +4,13 @@ chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         addListeners();
 
-        // if message greeting is "dark", darken any editing panes that are already open
-        if (request.greeting === "dark") {
+        setTimeout(function() {
+            QAEditingPanes();
+        }, 100);
+        setTimeout(function() {
+            QAEditingPanes();
+        }, 1000);
 
-            setTimeout(function() {
-                darkenEditingPanes();
-            }, 100);
-            setTimeout(function() {
-                darkenEditingPanes();
-            }, 1000);
-        }
         sendResponse({farewell: "goodbye"});
     }
 );
@@ -52,16 +49,16 @@ function addListeners() {
 function editingPaneInitializerClicked() {
     // 100ms delay is so editing panes that load quickly will immediately have the right styling
     setTimeout(function() {
-        darkenEditingPanes();
+        QAEditingPanes();
     }, 100);
     // 1000ms delay is so editing panes that do not load quickly will also be styled correctly with some potential delay
     setTimeout(function() {
-        darkenEditingPanes();
+        QAEditingPanes();
     }, 1000);
 }
 
 // Darken any editing panes that are open
-function darkenEditingPanes() {
+function QAEditingPanes() {
     const cssLink = document.createElement("link");
     cssLink.href = chrome.runtime.getURL("stylesheets/editing-panes.css");
     cssLink.rel = "stylesheet";
@@ -88,3 +85,6 @@ function darkenEditingPanes() {
         editor.contentWindow.document.head.appendChild(cssLink);
     });
 }
+
+
+
