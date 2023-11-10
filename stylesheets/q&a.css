@@ -18,7 +18,8 @@ pre,
 body .render-html-content code,
 strong,
 #main-post .helper-text.no-margin,
-.css-1dimb5e-singleValue {
+.css-1dimb5e-singleValue,
+.main-content .questions-and-answers #qanda-content article footer .update_text {
     color: #e7e6e6 !important;
 }
 
@@ -51,7 +52,8 @@ div[class*="css"][class$="menu"],
 #similar-posts li,
 .similar-posts,
 .popover-header,
-.popover {
+.popover,
+.main-content .questions-and-answers #qanda-content article .content .followup_content_wrapper .link_copied {
     background-color: #232323 !important;
 }
 #qaContentViewId,
@@ -129,8 +131,10 @@ body h1,
 .post_number_copy,
 .main-content .questions-and-answers #qanda-content article header h2,
 .css-1nmdiq5-menu,
-.main-content .questions-and-answers #qanda-content article footer .update_text,
-#react_feed .page_feed_tool_bar .page_feed_tool_bar_left #feed_filter_buttons .feed_filter_button {
+#react_feed .page_feed_tool_bar .page_feed_tool_bar_left #feed_filter_buttons .feed_filter_button,
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .metadata .timestamp,
+.main-content .questions-and-answers #qanda-content article .good_post_number,
+#main-post .helper-text  {
     color: #9f9d9d !important;
 }
 
@@ -183,8 +187,9 @@ body h1,
 
 /**********************************************/
 /* Links */
-#similar-posts li a {
-    color: #5d9acb !important;
+#similar-posts li a,
+#create-post #main-post a {
+    color: #5992bf !important;
 }
 
 

@@ -64,3 +64,11 @@ body h2,
     background-color: #888209 !important;
     color: #e7e6e6 !important;
 }
+
+/*****************************/
+/* Links */
+.btn.btn-link-text,
+.btn.btn-link,
+a {
+    color: #5992bf !important;
+}
