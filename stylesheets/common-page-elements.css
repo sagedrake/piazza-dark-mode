@@ -6,7 +6,8 @@ body h2,
 .form-control,
 .table,
 .dropdown-item,
-#topbar #my_class_menu .dropdown-item .top_bar_notification {
+#topbar #my_class_menu .dropdown-item .top_bar_notification,
+.btn.btn-primary {
     color: #e7e6e6 !important;
 }
 

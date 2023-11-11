@@ -1,7 +1,7 @@
 /**********************/
 /* White Text */
 body,
-body span,
+body span:not([data-id="contributors"]),
 .snippet,
 .tox .tox-mbtn,
 .tox :not(svg):not(rect),
@@ -53,7 +53,8 @@ div[class*="css"][class$="menu"],
 .similar-posts,
 .popover-header,
 .popover,
-.main-content .questions-and-answers #qanda-content article .content .followup_content_wrapper .link_copied {
+.main-content .questions-and-answers #qanda-content article .content .followup_content_wrapper .link_copied,
+.custom-control-label::before {
     background-color: #232323 !important;
 }
 #qaContentViewId,
@@ -73,8 +74,16 @@ li.feed_item.selected,
 .css-1nmdiq5-menu,
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .content .title .private-icon,
 kbd,
-pre {
+pre,
+.parent_spinner_overlay,
+#react_root .folder_selector .folder_button,
+#react_root .folder_selector .folder_button:hover,
+[aria-label="Class at a Glance"],
+.main-content .questions-and-answers #qanda-content article .content .resolved {
     background-color: #3b3b3b !important;
+}
+#react_feed #feed_list_wrapper #feed_list .bucket-header {
+    background-color: #2d2d2d !important;
 }
 
 
@@ -121,9 +130,15 @@ body h1,
     background-color: #484747 !important;
 }
 
+/*************************************/
+/* Ligher Grey Borders */
+#react_feed #filter-message .filter-holder {
+    border-color: #9f9d9d !important;
+}
 
 
-/**********************/
+
+    /**********************/
 /* Light Grey Text */
 ::placeholder,
 #react_root .main-content .questions-and-answers #qanda-content.homepage .class-buttons .btn-light:hover:after,
@@ -175,10 +190,15 @@ body h1,
     border-color: #3b3b3b !important;
     color: #e7e6e6 !important;
 }
+.row .btn.btn-light.btn-md {
+    background-color: #232323 !important;
+    border-color: #232323 !important;
+}
 
-/******************************/
+    /******************************/
 /* Blue buttons/icons with white text */
-.main-content .questions-and-answers #qanda-content article .btn-action {
+.main-content .questions-and-answers #qanda-content article .btn-action,
+#react_root .folder_selector .folder_button.selected {
     color: #e7e6e6 !important;
     background-color: #305f85 !important;
     border-color: #305f85 !important;
@@ -194,7 +214,7 @@ body h1,
 
 
 /**********************/
-/* FUN COLOURS */
+/* Colours */
 
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.instructor_endorsed,
 .instructor-endorsement {
@@ -202,15 +222,19 @@ body h1,
 }
 
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.open_teammate_searches {
-    color: #47b6d1 !important;
+    color: #5fd2ee !important;
 }
 
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.unresolved_followups {
-    color: #e92029 !important;
+    color: #ea5057 !important;
 }
 
 .main-content .questions-and-answers #qanda-content article .sign.red {
-    background-color: #e92029 !important;
+    background-color: #f84850 !important;
+}
+
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item.unanswered {
+    background-color: #572729 !important;
 }
 
 
@@ -242,7 +266,12 @@ body h1,
 
 /* Grey Borders */
 .nav-tabs .nav-link.active,
-#qanda-content #stats-view .tab-content {
+#qanda-content #stats-view .tab-content,
+.nav-tabs, .react-tabs__tab-list,
+.nav-tabs .nav-link:hover,
+.react-tabs__tab-list .nav-link:hover,
+.nav-tabs .nav-link:focus,
+.react-tabs__tab-list .nav-link:focus {
     border-color: #484747 !important;
 }
 
