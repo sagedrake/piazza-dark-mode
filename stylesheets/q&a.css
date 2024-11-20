@@ -22,9 +22,8 @@ strong,
 .main-content .questions-and-answers #qanda-content article footer .update_text,
 .main-content .questions-and-answers #qanda-content article footer span,
 #special-mentions {
-    color: #e7e6e6 !important;
+	color: #e7e6e6 !important;
 }
-
 
 /**********************/
 /* Darkest Grey Background */
@@ -58,15 +57,14 @@ div[class*="css"][class$="menu"],
 .main-content .questions-and-answers #qanda-content article .content .followup_content_wrapper .link_copied,
 .custom-control-label::before,
 #special-mentions #regular .content,
-#react_feed #feed_list_wrapper #feed_list ul li.feed_item .feed_item_dropdown_selector>.dropdown-menu>.dropdown-item .link_copied {
-    background-color: #232323 !important;
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .feed_item_dropdown_selector > .dropdown-menu > .dropdown-item .link_copied {
+	background-color: #232323 !important;
 }
 #qaContentViewId,
 article {
-    background-color: #232323 !important;
-    border-color: #232323 !important;
+	background-color: #232323 !important;
+	border-color: #232323 !important;
 }
-
 
 /**********************/
 /* Lighter Grey Background */
@@ -85,12 +83,11 @@ pre,
 #react_root .folder_selector .folder_button:hover,
 [aria-label="Class at a Glance"],
 .main-content .questions-and-answers #qanda-content article .content .resolved {
-    background-color: #3b3b3b !important;
+	background-color: #3b3b3b !important;
 }
 #react_feed #feed_list_wrapper #feed_list .bucket-header {
-    background-color: #2d2d2d !important;
+	background-color: #2d2d2d !important;
 }
-
 
 /**********************/
 /* Dark Grey Borders */
@@ -105,12 +102,12 @@ body h1,
 #react_root #folder_row .folder-item:after,
 .editor_row .preview_box,
 #react_root #folder_row .more_folders_col:before,
-#react_feed #feed_list_wrapper #feed_list ul li.feed_item .feed_item_dropdown_selector>.dropdown-menu>.dropdown-item,
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .feed_item_dropdown_selector > .dropdown-menu > .dropdown-item,
 .modal-content,
 .tox-tinymce,
 .tox-statusbar,
-.tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type),
-.tox .tox-menubar+.tox-toolbar,
+.tox:not([dir="rtl"]) .tox-toolbar__group:not(:last-of-type),
+.tox .tox-menubar + .tox-toolbar,
 .tox-toolbar__primary,
 #qanda-content #teammates .teammates_row,
 .css-13cymwt-control,
@@ -118,32 +115,31 @@ body h1,
 .similar-posts,
 .popover-header,
 .popover {
-    border-color: #484747 !important;
+	border-color: #484747 !important;
 }
-.bs-popover-right>.arrow::after, .bs-popover-auto[x-placement^=right]>.arrow::after {
-    border-right-color: #484747 !important;
+.bs-popover-right > .arrow::after,
+.bs-popover-auto[x-placement^="right"] > .arrow::after {
+	border-right-color: #484747 !important;
 }
 
 .tox-toolbar__primary,
 .tox-toolbar__overflow {
-    border-bottom: 1px solid #484747 !important;
-    background: none !important;
+	border-bottom: 1px solid #484747 !important;
+	background: none !important;
 }
 
 #react_feed .page_feed_tool_bar .page_feed_tool_bar_left #hide_feed_button:after,
 #react_feed .page_feed_tool_bar .dropdown #feed_gear_menu_selector:before {
-    background-color: #484747 !important;
+	background-color: #484747 !important;
 }
 
 /*************************************/
 /* Ligher Grey Borders */
 #react_feed #filter-message .filter-holder {
-    border-color: #9f9d9d !important;
+	border-color: #9f9d9d !important;
 }
 
-
-
-    /**********************/
+/**********************/
 /* Light Grey Text */
 ::placeholder,
 #react_root .main-content .questions-and-answers #qanda-content.homepage .class-buttons .btn-light:hover:after,
@@ -154,136 +150,120 @@ body h1,
 #react_feed .page_feed_tool_bar .page_feed_tool_bar_left #feed_filter_buttons .feed_filter_button,
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .metadata .timestamp,
 .main-content .questions-and-answers #qanda-content article .good_post_number,
-#main-post .helper-text  {
-    color: #9f9d9d !important;
+#main-post .helper-text {
+	color: #9f9d9d !important;
 }
-
-
 
 /**********************/
 /* Search bar, and other places you click to type */
 .form-control {
-    border-color: #484747 !important;
-    border-radius: 7px !important;
+	border-color: #484747 !important;
+	border-radius: 7px !important;
 }
-
-
 
 /**********************/
 /* White icons */
 .tox .tox-tbtn svg {
-    fill: #e7e6e6 !important;
+	fill: #e7e6e6 !important;
 }
-
 
 /**********************/
 /* Join Another Class Button */
 #topbar #my_class_menu .dropdown-item.dark-item#joinAnotherClassId :hover {
-    background-color: #265983 !important;
+	background-color: #265983 !important;
 }
-
 
 /******************************/
 /* Grey buttons */
 .row .btn.btn-light {
-    background-color: #484747 !important;
-    border-color: #484747 !important;
-    color: #e7e6e6 !important;
+	background-color: #484747 !important;
+	border-color: #484747 !important;
+	color: #e7e6e6 !important;
 }
 .row .btn.btn-light:hover {
-    background-color: #3b3b3b !important;
-    border-color: #3b3b3b !important;
-    color: #e7e6e6 !important;
+	background-color: #3b3b3b !important;
+	border-color: #3b3b3b !important;
+	color: #e7e6e6 !important;
 }
 .row .btn.btn-light.btn-md {
-    background-color: #232323 !important;
-    border-color: #232323 !important;
+	background-color: #232323 !important;
+	border-color: #232323 !important;
 }
 
-    /******************************/
+/******************************/
 /* Blue buttons/icons with white text */
 .main-content .questions-and-answers #qanda-content article .btn-action,
 #react_root .folder_selector .folder_button.selected {
-    color: #e7e6e6 !important;
-    background-color: #305f85 !important;
-    border-color: #305f85 !important;
+	color: #e7e6e6 !important;
+	background-color: #305f85 !important;
+	border-color: #305f85 !important;
 }
-
 
 /**********************************************/
 /* Links */
 #similar-posts li a,
 #create-post #main-post a {
-    color: #5992bf !important;
+	color: #5992bf !important;
 }
-
 
 /**********************/
 /* Colours */
 
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.instructor_endorsed,
 .instructor-endorsement {
-    color: #f69b51 !important;
+	color: #f69b51 !important;
 }
 
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.open_teammate_searches {
-    color: #5fd2ee !important;
+	color: #5fd2ee !important;
 }
 
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.unresolved_followups {
-    color: #ea5057 !important;
+	color: #ea5057 !important;
 }
 
 .main-content .questions-and-answers #qanda-content article .sign.red {
-    background-color: #931f24 !important;
+	background-color: #931f24 !important;
 }
 
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item.unanswered {
-    background-color: #572729 !important;
+	background-color: #572729 !important;
 }
 
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.followup_count {
-    color: #60c560 !important;
+	color: #60c560 !important;
 }
-
-
 
 /*******************************************************************************/
 /******************** Stats Page ************************************************/
 /*******************************************************************************/
 
-
 /* Dark Grey Backgrounds */
 #qanda-content #stats-view .glance-bg,
 #qanda-content #stats-view .container,
 #qanda-content #stats-view .top-students-bg {
-    background-color: #232323 !important;
+	background-color: #232323 !important;
 }
-
 
 /* Lighter Grey Backgrounds */
 .nav-tabs .nav-link.active {
-    background: #3b3b3b !important;
+	background: #3b3b3b !important;
 }
 
 /* White Text */
 .nav-tabs .nav-link.active,
 #qanda-content #stats-view .glance-value {
-    color: #e7e6e6 !important;
+	color: #e7e6e6 !important;
 }
-
 
 /* Grey Borders */
 .nav-tabs .nav-link.active,
 #qanda-content #stats-view .tab-content,
-.nav-tabs, .react-tabs__tab-list,
+.nav-tabs,
+.react-tabs__tab-list,
 .nav-tabs .nav-link:hover,
 .react-tabs__tab-list .nav-link:hover,
 .nav-tabs .nav-link:focus,
 .react-tabs__tab-list .nav-link:focus {
-    border-color: #484747 !important;
+	border-color: #484747 !important;
 }
-
-
-
-

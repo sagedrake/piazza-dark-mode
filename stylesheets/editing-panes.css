@@ -1,24 +1,23 @@
 p,
 pre {
-    color: #e7e6e6 !important;
+	color: #e7e6e6 !important;
 }
 
 [style] {
-    background: none !important;
+	background: none !important;
 }
 
 pre {
-    background-color: #3b3b3b !important;
+	background-color: #3b3b3b !important;
 }
-
 
 /**********************/
 /* Scrollbar */
 ::-webkit-scrollbar {
-    -webkit-appearance: none;
-    background-color: #232323;
-    width: 15px;
+	-webkit-appearance: none;
+	background-color: #232323;
+	width: 15px;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: #777575;
+	background-color: #777575;
 }

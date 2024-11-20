@@ -8,7 +8,7 @@ body h2,
 .dropdown-item,
 #topbar #my_class_menu .dropdown-item .top_bar_notification,
 .btn.btn-primary {
-    color: #e7e6e6 !important;
+	color: #e7e6e6 !important;
 }
 
 /**********************/
@@ -18,52 +18,49 @@ body h2,
 .dropdown-menu,
 .modal-content,
 #react_root #topbar .dropdown .dropdown-menu .dropdown-item.dark-item {
-    background-color: #232323 !important;
+	background-color: #232323 !important;
 }
-
 
 /**********************/
 /* Lighter Grey Background */
 .dropdown-item:hover,
 #react_root #topbar #my_class_menu .dropdown-item.dark-item.border-top:hover,
 #topbar #my_class_menu .dropdown-item .top_bar_notification {
-    background-color: #3b3b3b !important;
+	background-color: #3b3b3b !important;
 }
 
-
-    /**********************/
+/**********************/
 /* Dark Grey Borders */
 .form-control,
 .modal-footer,
 .modal-header {
-    border-color: #595959 !important;
+	border-color: #595959 !important;
 }
 
 /**********************/
 /* Scrollbar */
 ::-webkit-scrollbar {
-    -webkit-appearance: none;
-    background-color: #232323;
-    width: 15px;
+	-webkit-appearance: none;
+	background-color: #232323;
+	width: 15px;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: #777575;
+	background-color: #777575;
 }
-
 
 /**********************/
 /* Alerts like "this class has been made inactive" */
 .alert.alert-info,
 .alert-warning,
 .alert-primary {
-    background-color: #265983 !important;
-    border-color: #265983 !important;
-    color: #e7e6e6 !important;
+	background-color: #265983 !important;
+	border-color: #265983 !important;
+	color: #e7e6e6 !important;
 }
 
 .alert.alert-warning.border {
-    background-color: #888209 !important;
-    color: #e7e6e6 !important;
+	background-color: #888209 !important;
+	color: #e7e6e6 !important;
 }
 
 /*****************************/
@@ -71,5 +68,5 @@ body h2,
 .btn.btn-link-text,
 .btn.btn-link,
 a {
-    color: #5992bf !important;
+	color: #5992bf !important;
 }

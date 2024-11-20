@@ -1,45 +1,51 @@
 {
-  "name": "Piazza Dark Mode",
-  "version": "2.0.0",
-  "description": "Puts Piazza.com in dark mode to save your eyes",
-  "manifest_version": 3,
-  "author": "Sage Drake",
-  "icons": {
-    "16": "images/Logo16.png",
-    "48": "images/Logo48.png",
-    "128": "images/Logo128.png"
-  },
-  "permissions": ["tabs", "storage"],
-  "content_scripts": [
-    {
-      "matches": ["https://piazza.com/class/*"],
-      "js": ["content-scripts/q&a-editing-panes.js"]
-    },
-    {
-      "js": [ "content-scripts/settings-page.js","content-scripts/common-page-elements.js" ],
-      "matches": ["https://piazza.com/account_settings*"],
-      "run_at": "document_start"
-    },
-    {
-      "js": [ "content-scripts/resources-page.js" ,"content-scripts/common-page-elements.js" ],
-      "matches": ["https://piazza.com/*/resources", "https://piazza.com/*/staff", "https://piazza.com/*/info"],
-      "run_at": "document_start"
-    },
-    {
-      "js": [ "content-scripts/q&a-page.js","content-scripts/common-page-elements.js" ],
-      "matches": [ "https://piazza.com/class/*" ],
-      "run_at": "document_start"
-    }
-  ],
-  "background": {
-    "service_worker" : "background.js"
-  },
-  "web_accessible_resources": [
-    {
-      "resources": [ "stylesheets/editing-panes.css", "stylesheets/q&a.css",
-        "stylesheets/common-page-elements.css", "stylesheets/settings.css", "stylesheets/resources.css",
-        "images/sun.png", "images/moon.png"],
-      "matches": [ "https://piazza.com/*" ]
-    }
-  ]
+	"name": "Piazza Dark Mode",
+	"version": "2.0.0",
+	"description": "Puts Piazza.com in dark mode to save your eyes",
+	"manifest_version": 3,
+	"author": "Sage Drake",
+	"icons": {
+		"16": "images/Logo16.png",
+		"48": "images/Logo48.png",
+		"128": "images/Logo128.png"
+	},
+	"permissions": ["tabs", "storage"],
+	"content_scripts": [
+		{
+			"matches": ["https://piazza.com/class/*"],
+			"js": ["content-scripts/q&a-editing-panes.js"]
+		},
+		{
+			"js": ["content-scripts/settings-page.js", "content-scripts/common-page-elements.js"],
+			"matches": ["https://piazza.com/account_settings*"],
+			"run_at": "document_start"
+		},
+		{
+			"js": ["content-scripts/resources-page.js", "content-scripts/common-page-elements.js"],
+			"matches": ["https://piazza.com/*/resources", "https://piazza.com/*/staff", "https://piazza.com/*/info"],
+			"run_at": "document_start"
+		},
+		{
+			"js": ["content-scripts/q&a-page.js", "content-scripts/common-page-elements.js"],
+			"matches": ["https://piazza.com/class/*"],
+			"run_at": "document_start"
+		}
+	],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"web_accessible_resources": [
+		{
+			"resources": [
+				"stylesheets/editing-panes.css",
+				"stylesheets/q&a.css",
+				"stylesheets/common-page-elements.css",
+				"stylesheets/settings.css",
+				"stylesheets/resources.css",
+				"images/sun.png",
+				"images/moon.png"
+			],
+			"matches": ["https://piazza.com/*"]
+		}
+	]
 }

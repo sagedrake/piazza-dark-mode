@@ -1,4 +1,3 @@
-
 /* Darkest Grey Backgrounds */
 .card,
 body #classEmailSettingsId .class-box,
@@ -6,18 +5,15 @@ body #classEmailSettingsId .class-box,
 .bs-rs__control,
 .bs-rs__menu,
 input.form-control:focus {
-    background-color: #232323 !important;
+	background-color: #232323 !important;
 }
-
-
 
 /* Lighter Grey Backgrounds */
 body,
 .custom-control-label::before,
 .bs-rs__option--is-focused {
-    background: #313131 !important;
+	background: #313131 !important;
 }
-
 
 /* White Text */
 body,
@@ -25,7 +21,7 @@ body,
 body .required-fields,
 #react_root .btn:disabled.btn-outline-secondary,
 .bs-rs__single-value {
-    color: #e7e6e6 !important;
+	color: #e7e6e6 !important;
 }
 
 /* Grey Borders */
@@ -36,17 +32,16 @@ body #classEmailSettingsId .color-picker-dropdown .btn-primary,
 .bs-rs__control,
 .col.border-bottom,
 .modal-header {
-    border-color: #595959 !important;
+	border-color: #595959 !important;
 }
 body .card .focusable {
-    border-bottom-color: #595959 !important;
+	border-bottom-color: #595959 !important;
 }
 .bs-rs__menu {
-    border: 1px solid #595959 !important;
+	border: 1px solid #595959 !important;
 }
-
 
 /* Blue Backgrounds */
 .bs-rs__option--is-selected {
-    background: #2684FF !important;
+	background: #2684ff !important;
 }

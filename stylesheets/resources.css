@@ -1,30 +1,32 @@
 body {
-    background-color: #232323 !important;
+	background-color: #232323 !important;
 }
 
 .react-tabs__tab-list .nav-link.active {
-    background: #313131 !important;
-    color: #e7e6e6 !important;
+	background: #313131 !important;
+	color: #e7e6e6 !important;
 }
 
 .text-body.helper-text,
 body .alert.alert-light {
-    color: #e7e6e6 !important;
+	color: #e7e6e6 !important;
 }
 
 .react-tabs__tab-list,
-body #resources div.resource-section .separator-line .col-12>div,
+body #resources div.resource-section .separator-line .col-12 > div,
 .react-tabs__tab-list .nav-link.active,
 body table#staffTable tbody,
 .table td,
 .col.border,
 .col.border-bottom,
-.nav-tabs .nav-link:hover, .react-tabs__tab-list .nav-link:hover,
-.nav-tabs .nav-link:focus, .react-tabs__tab-list .nav-link:focus {
-    border-color: #484747 !important;
+.nav-tabs .nav-link:hover,
+.react-tabs__tab-list .nav-link:hover,
+.nav-tabs .nav-link:focus,
+.react-tabs__tab-list .nav-link:focus {
+	border-color: #484747 !important;
 }
 
 /* Gradient */
 body .gradient-cut-up:after {
-    background-image: linear-gradient(to bottom, rgba(241, 241, 241, 0) 0%, #232323 100%) !important;
+	background-image: linear-gradient(to bottom, rgba(241, 241, 241, 0) 0%, #232323 100%) !important;
 }
