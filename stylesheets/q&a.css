@@ -19,7 +19,9 @@ body .render-html-content code,
 strong,
 #main-post .helper-text.no-margin,
 .css-1dimb5e-singleValue,
-.main-content .questions-and-answers #qanda-content article footer .update_text {
+.main-content .questions-and-answers #qanda-content article footer .update_text,
+.main-content .questions-and-answers #qanda-content article footer span,
+#special-mentions {
     color: #e7e6e6 !important;
 }
 
@@ -54,7 +56,9 @@ div[class*="css"][class$="menu"],
 .popover-header,
 .popover,
 .main-content .questions-and-answers #qanda-content article .content .followup_content_wrapper .link_copied,
-.custom-control-label::before {
+.custom-control-label::before,
+#special-mentions #regular .content,
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .feed_item_dropdown_selector>.dropdown-menu>.dropdown-item .link_copied {
     background-color: #232323 !important;
 }
 #qaContentViewId,
@@ -68,6 +72,7 @@ article {
 /* Lighter Grey Background */
 .questions-and-answers,
 .dropdown-item:hover,
+.dropdown-item:focus,
 #react_root .main-content .questions-and-answers #qanda-content.homepage .class-buttons .btn-light:hover,
 li.feed_item.selected,
 .css-d7l1ni-option,
@@ -230,11 +235,15 @@ body h1,
 }
 
 .main-content .questions-and-answers #qanda-content article .sign.red {
-    background-color: #f84850 !important;
+    background-color: #931f24 !important;
 }
 
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item.unanswered {
     background-color: #572729 !important;
+}
+
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.followup_count {
+    color: #60c560 !important;
 }
 
 
