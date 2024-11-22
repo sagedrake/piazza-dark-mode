@@ -1,14 +1,11 @@
-let mode;
-
 const commonCssLink = document.createElement("link");
 commonCssLink.href = chrome.runtime.getURL("stylesheets/common-page-elements.css");
 commonCssLink.rel = "stylesheet";
 commonCssLink.type = "text/css";
 commonCssLink.id = "commonCSS";
 
-console.log("initialize");
 // initialize dark/light style when common-page-elements.js is first run
-initializeStyle();
+initializeStyle().catch(console.log);
 
 function darken() {
 	darkenPageSpecificElements();
@@ -28,26 +25,22 @@ async function initializeStyle() {
 	chrome.storage.local.get(["mode"]).then((result) => {
 		if (result.mode === "DARK") {
 			darken();
-			mode = "DARK";
-		} else {
-			mode = "LIGHT";
 		}
 	});
 }
 
 function changeMode() {
-	console.log("mode: " + mode);
-	if (mode === "DARK") {
-		lighten();
-		document.getElementById("change_mode_image").src = chrome.runtime.getURL("images/moon.png");
-		mode = "LIGHT";
-		chrome.storage.local.set({ mode: "LIGHT" }).then(() => {});
-	} else if (mode === "LIGHT") {
-		darken();
-		document.getElementById("change_mode_image").src = chrome.runtime.getURL("images/sun.png");
-		mode = "DARK";
-		chrome.storage.local.set({ mode: "DARK" }).then(() => {});
-	}
+	chrome.storage.local.get(["mode"]).then((result) => {
+		if (result.mode === "DARK") {
+			lighten();
+			document.getElementById("change_mode_image").src = chrome.runtime.getURL("images/moon.png");
+			chrome.storage.local.set({ mode: "LIGHT" }).then(() => {});
+		} else if (result.mode === "LIGHT") {
+			darken();
+			document.getElementById("change_mode_image").src = chrome.runtime.getURL("images/sun.png");
+			chrome.storage.local.set({ mode: "DARK" }).then(() => {});
+		}
+	});
 }
 
 // creates a button on the top bar to change between light and dark mode (iff the button doesn't already exist)
@@ -70,11 +63,14 @@ function createChangeModeButton() {
 	changeModeImage.height = 25;
 	changeModeImage.margin = "auto";
 	changeModeImage.id = "change_mode_image";
-	if (mode === "DARK") {
-		changeModeImage.src = chrome.runtime.getURL("images/sun.png");
-	} else {
-		changeModeImage.src = chrome.runtime.getURL("images/moon.png");
-	}
+
+	chrome.storage.local.get(["mode"]).then((result) => {
+		if (result.mode === "DARK") {
+			changeModeImage.src = chrome.runtime.getURL("images/sun.png");
+		} else {
+			changeModeImage.src = chrome.runtime.getURL("images/moon.png");
+		}
+	});
 
 	changeModeButton.appendChild(changeModeImage);
 	changeModeContainer.appendChild(changeModeButton);

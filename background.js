@@ -1,26 +1,4 @@
-let mode;
-
-chrome.storage.local.get(["mode"]).then((result) => {
-	if (result.mode === "DARK") {
-		mode = "DARK";
-	} else {
-		mode = "LIGHT";
-	}
-});
-
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-	if (request.greeting === "mode setting please") {
-		sendResponse({ farewell: mode });
-	} else if (request.greeting === "set light") {
-		mode = "LIGHT";
-		sendResponse({ farewell: "done" });
-	} else if (request.greeting === "set dark") {
-		mode = "DARK";
-		sendResponse({ farewell: "done" });
-	}
-});
-
-// Send message to content-script.js when any tab is updated
+// Send message to content scripts when any relevant Piazza tab is updated
 chrome.tabs.onUpdated.addListener(async function (tabId, info) {
 	const activeTab = await getActiveTab();
 	const correctTab =
