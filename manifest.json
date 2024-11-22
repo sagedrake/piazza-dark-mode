@@ -1,6 +1,6 @@
 {
 	"name": "Piazza Dark Mode",
-	"version": "2.0.0",
+	"version": "2.0.3",
 	"description": "Puts Piazza.com in dark mode to save your eyes",
 	"manifest_version": 3,
 	"author": "Sage Drake",
@@ -9,12 +9,8 @@
 		"48": "images/logo-48.png",
 		"128": "images/logo-128.png"
 	},
-	"permissions": ["tabs", "storage"],
+	"permissions": ["storage"],
 	"content_scripts": [
-		{
-			"matches": ["https://piazza.com/class/*"],
-			"js": ["content-scripts/q&a-editing-panes.js"]
-		},
 		{
 			"js": ["content-scripts/settings-page.js", "content-scripts/common-page-elements.js"],
 			"matches": ["https://piazza.com/account_settings*"],
@@ -29,11 +25,18 @@
 			"js": ["content-scripts/q&a-page.js", "content-scripts/common-page-elements.js"],
 			"matches": ["https://piazza.com/class/*"],
 			"run_at": "document_start"
+		},
+		{
+			"matches": ["https://piazza.com/class/*"],
+			"js": ["content-scripts/q&a-editing-panes.js"],
+			"run_at": "document_idle"
+		},
+		{
+			"matches": ["https://piazza.com/class/*"],
+			"js": ["content-scripts/change-mode.js"],
+			"run_at": "document_idle"
 		}
 	],
-	"background": {
-		"service_worker": "background.js"
-	},
 	"web_accessible_resources": [
 		{
 			"resources": [
