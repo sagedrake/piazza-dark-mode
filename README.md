@@ -16,10 +16,10 @@ There's currently no popup window and Piazza will have a dark colour scheme as l
 and enabled.
 
 **Without Piazza Dark Mode:**
-![Example image of Piazza.com without any extensions](images/regularPiazzaExample.png)
+![Example image of Piazza.com without any extensions](images/regular-piazza-example.png)
 
 **With Piazza Dark Mode:**
-![Example image of Piazza.com with Piazza Dark Mode enabled](images/darkModeExample.png)
+![Example image of Piazza.com with Piazza Dark Mode enabled](images/dark-mode-example.png)
 
 Coming soon...
 

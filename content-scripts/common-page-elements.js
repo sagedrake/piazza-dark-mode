@@ -8,12 +8,14 @@ commonCssLink.id = "commonCSS";
 initializeStyle().catch(console.log);
 
 function darken() {
+	// each page-specific js file has its own version of darkenPageSpecificElements()
 	darkenPageSpecificElements();
 
 	document.documentElement.appendChild(commonCssLink);
 }
 
 function lighten() {
+	// each page-specific js file has its own version of lightenPageSpecificElements()
 	lightenPageSpecificElements();
 
 	const commonCssLink = document.getElementById("commonCSS");
@@ -43,7 +45,7 @@ function changeMode() {
 	});
 }
 
-// creates a button on the top bar to change between light and dark mode (iff the button doesn't already exist)
+// creates a button on the top bar to change between light and dark mode (if the button doesn't already exist)
 function createChangeModeButton() {
 	// if the button already exists, return early instead of creating it
 	if (document.getElementById("change_mode") != null) {
@@ -79,6 +81,7 @@ function createChangeModeButton() {
 	topBar.insertBefore(changeModeContainer, topBarChild);
 }
 
+// this script is injected when the page starts loading, and it needs to know when the page is done loading
 // when message from background script is received, it means the page has completed loading
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 	// button on top bar to change between light/dark mode can only be added after the page has finished loading

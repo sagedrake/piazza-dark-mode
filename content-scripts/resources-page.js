@@ -4,7 +4,7 @@ cssLink.rel = "stylesheet";
 cssLink.type = "text/css";
 cssLink.id = "q&aCSS";
 
-// add dark stylesheet as child elements to document element
+// add dark stylesheet as child to document
 function darkenPageSpecificElements() {
 	document.documentElement.appendChild(cssLink);
 }
