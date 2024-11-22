@@ -12,28 +12,39 @@
 	"permissions": ["storage"],
 	"content_scripts": [
 		{
-			"js": ["content-scripts/settings-page.js", "content-scripts/common-page-elements.js"],
+			"js": ["content-scripts/common/initialize-styles.js"],
+			"matches": [
+				"https://piazza.com/class/*",
+				"https://piazza.com/account_settings*",
+				"https://piazza.com/*/resources",
+				"https://piazza.com/*/staff",
+				"https://piazza.com/*/info"
+			],
+			"run_at": "document_start"
+		},
+		{
+			"js": ["content-scripts/page-specific/settings-page.js"],
 			"matches": ["https://piazza.com/account_settings*"],
 			"run_at": "document_start"
 		},
 		{
-			"js": ["content-scripts/resources-page.js", "content-scripts/common-page-elements.js"],
+			"js": ["content-scripts/page-specific/resources-page.js"],
 			"matches": ["https://piazza.com/*/resources", "https://piazza.com/*/staff", "https://piazza.com/*/info"],
 			"run_at": "document_start"
 		},
 		{
-			"js": ["content-scripts/q&a-page.js", "content-scripts/common-page-elements.js"],
+			"js": ["content-scripts/page-specific/q&a-page.js"],
 			"matches": ["https://piazza.com/class/*"],
 			"run_at": "document_start"
 		},
 		{
 			"matches": ["https://piazza.com/class/*"],
-			"js": ["content-scripts/q&a-editing-panes.js"],
+			"js": ["content-scripts/common/change-mode.js"],
 			"run_at": "document_idle"
 		},
 		{
 			"matches": ["https://piazza.com/class/*"],
-			"js": ["content-scripts/change-mode.js"],
+			"js": ["content-scripts/q&a-editing-panes.js"],
 			"run_at": "document_idle"
 		}
 	],

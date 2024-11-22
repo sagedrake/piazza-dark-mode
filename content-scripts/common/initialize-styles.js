@@ -27,7 +27,7 @@ async function initializeStyle() {
 	chrome.storage.local.get(["mode"]).then((result) => {
 		if (result.mode === "DARK") {
 			darken();
-		} else if (result.mode === "LIGHTEN") {
+		} else if (result.mode === "LIGHT") {
 			// do nothing since page is light by default
 		} else {
 			// if result.mode has not been set, default to dark mode
