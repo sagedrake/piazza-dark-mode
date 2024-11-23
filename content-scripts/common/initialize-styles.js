@@ -8,18 +8,23 @@ commonCssLink.id = "commonCSS";
 initializeStyle().catch(console.log);
 
 function darken() {
-	// each page-specific js file has its own version of darkenPageSpecificElements()
-	darkenPageSpecificElements();
-
+	// this stylesheet styles elements that are common among Piazza pages
 	document.documentElement.appendChild(commonCssLink);
+
+	// each page-specific js file has its own version of darkenPageSpecificElements() that should be called if it exists
+	if (typeof darkenPageSpecificElements === "function") {
+		darkenPageSpecificElements();
+	}
 }
 
 function lighten() {
-	// each page-specific js file has its own version of lightenPageSpecificElements()
-	lightenPageSpecificElements();
-
 	const commonCssLink = document.getElementById("commonCSS");
 	document.documentElement.removeChild(commonCssLink);
+
+	// each page-specific js file has its own version of lightenPageSpecificElements() that should be called if it exists
+	if (typeof lightenPageSpecificElements === "function") {
+		lightenPageSpecificElements();
+	}
 }
 
 // start in dark mode if saved setting is DARK, or start in light mode if saved setting is LIGHT
