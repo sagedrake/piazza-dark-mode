@@ -43,17 +43,11 @@
 			"matches": ["https://piazza.com/class/*"],
 			"js": ["content-scripts/common/change-mode.js"],
 			"run_at": "document_idle"
-		},
-		{
-			"matches": ["https://piazza.com/class/*"],
-			"js": ["content-scripts/q&a-editing-panes.js"],
-			"run_at": "document_idle"
 		}
 	],
 	"web_accessible_resources": [
 		{
 			"resources": [
-				"stylesheets/editing-panes.css",
 				"stylesheets/q&a.css",
 				"stylesheets/common-page-elements.css",
 				"stylesheets/settings.css",
