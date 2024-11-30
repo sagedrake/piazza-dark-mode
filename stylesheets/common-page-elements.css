@@ -7,7 +7,8 @@ body h2,
 .table,
 .dropdown-item,
 #topbar #my_class_menu .dropdown-item .top_bar_notification,
-.btn.btn-primary {
+.btn.btn-primary,
+#tinymce {
 	color: #e7e6e6 !important;
 }
 
@@ -58,8 +59,17 @@ body h2,
 	color: #e7e6e6 !important;
 }
 
-.alert.alert-warning.border {
-	background-color: #888209 !important;
+.alert.alert-warning.border,
+#qanda-content #teammates .alert {
+	background-color: #7d5c20 !important;
+	border-color: #644a22 !important;
+	color: #e7e6e6 !important;
+}
+
+/**********************/
+/* Code blocks */
+pre {
+	background-color: #3b3b3b !important;
 	color: #e7e6e6 !important;
 }
 

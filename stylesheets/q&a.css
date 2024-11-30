@@ -14,7 +14,6 @@ label,
 #latexPreviewRender,
 #qanda-content #teammates .group_details,
 .responses.text-black-50,
-pre,
 body .render-html-content code,
 strong,
 #main-post .helper-text.no-margin,
@@ -55,7 +54,6 @@ div[class*="css"][class$="menu"],
 .popover-header,
 .popover,
 .main-content .questions-and-answers #qanda-content article .content .followup_content_wrapper .link_copied,
-.custom-control-label::before,
 #special-mentions #regular .content,
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .feed_item_dropdown_selector > .dropdown-menu > .dropdown-item .link_copied {
 	background-color: #232323 !important;
@@ -77,7 +75,6 @@ li.feed_item.selected,
 .css-1nmdiq5-menu,
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .content .title .private-icon,
 kbd,
-pre,
 .parent_spinner_overlay,
 #react_root .folder_selector .folder_button,
 #react_root .folder_selector .folder_button:hover,
@@ -162,6 +159,14 @@ body h1,
 }
 
 /**********************/
+/* Radio buttons */
+.form-check-input,
+.custom-control-label::before {
+	accent-color: #265983 !important;
+	background-color: #232323 !important;
+}
+
+/**********************/
 /* White icons */
 .tox .tox-tbtn svg {
 	fill: #e7e6e6 !important;
@@ -189,11 +194,21 @@ body h1,
 	background-color: #232323 !important;
 	border-color: #232323 !important;
 }
+#Link circle,
+#Note rect {
+	fill: #484747 !important;
+}
+
+/* Navigation settings button */
+#feed_gear_menu_selector {
+	border: none;
+}
 
 /******************************/
 /* Blue buttons/icons with white text */
 .main-content .questions-and-answers #qanda-content article .btn-action,
-#react_root .folder_selector .folder_button.selected {
+#react_root .folder_selector .folder_button.selected,
+#load-all-button {
 	color: #e7e6e6 !important;
 	background-color: #305f85 !important;
 	border-color: #305f85 !important;
@@ -252,7 +267,8 @@ body h1,
 
 /* White Text */
 .nav-tabs .nav-link.active,
-#qanda-content #stats-view .glance-value {
+#qanda-content #stats-view .glance-value,
+.table-hover tbody tr:hover {
 	color: #e7e6e6 !important;
 }
 
