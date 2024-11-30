@@ -34,7 +34,8 @@ body h2,
 /* Dark Grey Borders */
 .form-control,
 .modal-footer,
-.modal-header {
+.modal-header,
+.dropdown-menu {
 	border-color: #595959 !important;
 }
 
@@ -47,6 +48,10 @@ body h2,
 }
 ::-webkit-scrollbar-thumb {
 	background-color: #777575;
+}
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 2px #595959;
+	border-radius: 0;
 }
 
 /**********************/

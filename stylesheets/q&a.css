@@ -89,7 +89,7 @@ kbd,
 /**********************/
 /* Dark Grey Borders */
 body p,
-body span,
+body .row span,
 body h1,
 .border-top.container-fluid,
 .border-bottom.container-fluid,
@@ -130,8 +130,13 @@ body h1,
 	background-color: #484747 !important;
 }
 
+#react_root #folder_row,
+#react_feed .page_feed_tool_bar {
+	border-bottom: 1px solid #484747 !important;
+}
+
 /*************************************/
-/* Ligher Grey Borders */
+/* Lighter Grey Borders */
 #react_feed #filter-message .filter-holder {
 	border-color: #9f9d9d !important;
 }
@@ -202,6 +207,21 @@ body h1,
 /* Navigation settings button */
 #feed_gear_menu_selector {
 	border: none;
+}
+
+/* Lack of borders */
+.bucket-header.gray-bar {
+	border: none;
+}
+#folder_row,
+#react_feed .page_feed_tool_bar,
+#react_root #history_bar {
+	border-top-color: transparent;
+}
+
+/* White borders */
+#qa_link .innercontents {
+	border-color: white !important;
 }
 
 /******************************/
