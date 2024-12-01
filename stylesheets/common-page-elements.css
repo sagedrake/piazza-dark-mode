@@ -35,7 +35,9 @@ body h2,
 .form-control,
 .modal-footer,
 .modal-header,
-.dropdown-menu {
+.dropdown-menu,
+#react_root #topbar .dropdown .dropdown-menu .dropdown-item.border-top,
+.dropdown-divider {
 	border-color: #595959 !important;
 }
 

@@ -234,6 +234,12 @@ body h1,
 	border-color: #305f85 !important;
 }
 
+/******************************/
+/* Grey-ish blue buttons */
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .feed_item_dropdown_selector > .dropdown-toggle {
+	background-color: #5e6f7d;
+}
+
 /**********************************************/
 /* Links */
 #similar-posts li a,
@@ -254,15 +260,21 @@ body h1,
 }
 
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.unresolved_followups {
-	color: #ea5057 !important;
+	color: #f17e84 !important;
 }
 
 .main-content .questions-and-answers #qanda-content article .sign.red {
 	background-color: #931f24 !important;
 }
 
-#react_feed #feed_list_wrapper #feed_list ul li.feed_item.unanswered {
-	background-color: #572729 !important;
+li.feed_item.unanswered {
+	background-color: #3f1d1e !important;
+	border-color: #484747 !important;
+}
+
+li.feed_item.unanswered.selected {
+	background-color: #602d2f !important;
+	border-color: #484747 !important;
 }
 
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.followup_count {

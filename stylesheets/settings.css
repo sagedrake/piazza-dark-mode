@@ -41,6 +41,19 @@ body .card .focusable {
 	border: 1px solid #595959 !important;
 }
 
+/******************************/
+/* Grey buttons */
+#react_root .btn.btn-outline-secondary {
+	background-color: #484747 !important;
+	border-color: #484747 !important;
+	color: #e7e6e6 !important;
+}
+#react_root .btn.btn-outline-secondary:hover {
+	background-color: #3b3b3b !important;
+	border-color: #3b3b3b !important;
+	color: #e7e6e6 !important;
+}
+
 /* Blue Backgrounds */
 .bs-rs__option--is-selected {
 	background: #2684ff !important;
