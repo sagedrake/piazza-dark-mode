@@ -2,8 +2,8 @@
 
 ## Project Motivation
 Piazza is a website for students to ask questions in a course-specific forum where instructors and students can answer. Many of the
-courses I'm taking at UBC use this platform, and it does not have a built-in dark mode. The light colours of the website irritated me. I tried using another Chrome extension called Dark Reader 
-fix this, but it made some of the colours very ugly on the site. So, I decided to create this Chrome extension to fix the issue.
+courses I'm taking at UBC use this platform, and it does not have a built-in dark mode. The light colours of the website irritated me. 
+So, I decided to create this Chrome extension to fix the issue.
 
 ## How to Use
 ### Easiest installation method
@@ -28,13 +28,7 @@ Similarly, if you are in light mode and would like to switch back to dark mode, 
 
 Your choice of light or dark mode will be remembered on future visits to Piazza pages.
 
-## Features
-
-With Piazza dark mode, students can do the following in a new, darker colour scheme:
-- view questions and answers
-- post questions and follow-ups to questions
-- write answers to other students' questions
-- view course statistics and settings
+## Dark Mode Results
 
 Here are some examples of how Piazza Dark Mode changes the appearance of Piazza
 ![Dark Mode Results 1](images/results-1.png)
