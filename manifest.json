@@ -10,9 +10,13 @@
 		"128": "images/logo-128.png"
 	},
 	"permissions": ["storage"],
+	"background": {
+		"service_worker": "service-worker.js",
+		"type": "module"
+	},
 	"content_scripts": [
 		{
-			"js": ["content-scripts/common/initialize-styles.js"],
+			"js": ["content-scripts/common/set-style.js"],
 			"matches": [
 				"https://piazza.com/class/*",
 				"https://piazza.com/account_settings*",

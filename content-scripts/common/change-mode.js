@@ -1,14 +1,34 @@
 createChangeModeButton();
 
+function sendToServiceWorker(str) {
+	console.log("sending message");
+	chrome.runtime
+		.sendMessage({ greeting: str })
+		.then((response) => {
+			console.log(response);
+		})
+		.catch((e) => {
+			console.log(`Error when sending message from content script to service worker: ${e}`);
+		});
+}
+
 function changeMode() {
-	chrome.storage.local.get(["mode"]).then((result) => {
+	chrome.storage.local.get(["mode"]).then(async (result) => {
 		if (result.mode === "DARK") {
+			// send message to service worker which will forward the message to documents in iframes
+			sendToServiceWorker("lighten");
+			// call the lighten function in set-style.js
 			lighten();
 			document.getElementById("change_mode_image").src = chrome.runtime.getURL("images/moon.png");
+			// persist the new mode selection
 			chrome.storage.local.set({ mode: "LIGHT" }).then(() => {});
 		} else if (result.mode === "LIGHT") {
+			// send message to service worker which will forward the message to documents in iframes
+			sendToServiceWorker("darken");
+			// call the darken function in set-style.js
 			darken();
 			document.getElementById("change_mode_image").src = chrome.runtime.getURL("images/sun.png");
+			// persist the new mode selection
 			chrome.storage.local.set({ mode: "DARK" }).then(() => {});
 		}
 	});

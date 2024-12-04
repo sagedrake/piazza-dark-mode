@@ -1,16 +1,19 @@
+const COMMON_STYLESHEET_NAME = "commonCSS";
 const commonCssLink = document.createElement("link");
+// this stylesheet styles elements that are common among Piazza pages
 commonCssLink.href = chrome.runtime.getURL("stylesheets/common-page-elements.css");
 commonCssLink.rel = "stylesheet";
 commonCssLink.type = "text/css";
-commonCssLink.id = "commonCSS";
+commonCssLink.id = COMMON_STYLESHEET_NAME;
 
 // initialize dark/light style when common-page-elements.js is first run
 initializeStyle().catch(console.log);
 
 function darken() {
-	// this stylesheet styles elements that are common among Piazza pages
-	document.documentElement.appendChild(commonCssLink);
-
+	// add stylesheet if it is not present already
+	if (document.getElementById(COMMON_STYLESHEET_NAME) === null) {
+		document.documentElement.appendChild(commonCssLink);
+	}
 	// each page-specific js file has its own version of darkenPageSpecificElements() that should be called if it exists
 	if (typeof darkenPageSpecificElements === "function") {
 		darkenPageSpecificElements();
@@ -18,8 +21,10 @@ function darken() {
 }
 
 function lighten() {
-	const commonCssLink = document.getElementById("commonCSS");
-	document.documentElement.removeChild(commonCssLink);
+	const commonCssLink = document.getElementById(COMMON_STYLESHEET_NAME);
+	if (commonCssLink) {
+		document.documentElement.removeChild(commonCssLink);
+	}
 
 	// each page-specific js file has its own version of lightenPageSpecificElements() that should be called if it exists
 	if (typeof lightenPageSpecificElements === "function") {
@@ -41,3 +46,15 @@ async function initializeStyle() {
 		}
 	});
 }
+
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+	console.log("received message from service worker");
+	if (request.greeting === "lighten") {
+		lighten();
+		sendResponse({ farewell: "lightened" });
+	}
+	if (request.greeting === "darken") {
+		darken();
+		sendResponse({ farewell: "darkened" });
+	}
+});
