@@ -87,3 +87,8 @@ pre {
 a {
 	color: #5992bf !important;
 }
+
+/* Latex edits */
+.piazza-latex-edit {
+	background: rgb(77 77 19) !important;
+}
