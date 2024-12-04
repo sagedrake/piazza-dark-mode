@@ -1,6 +1,6 @@
 {
 	"name": "Piazza Dark Mode",
-	"version": "2.2.0",
+	"version": "2.3.0",
 	"description": "Puts Piazza.com in dark mode to save your eyes",
 	"manifest_version": 3,
 	"author": "Sage Drake",
@@ -40,8 +40,14 @@
 			"run_at": "document_start"
 		},
 		{
-			"matches": ["https://piazza.com/class/*"],
 			"js": ["content-scripts/common/change-mode.js"],
+			"matches": [
+				"https://piazza.com/class/*",
+				"https://piazza.com/account_settings*",
+				"https://piazza.com/*/resources",
+				"https://piazza.com/*/staff",
+				"https://piazza.com/*/info"
+			],
 			"run_at": "document_idle"
 		}
 	],
