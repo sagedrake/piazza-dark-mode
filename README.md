@@ -9,11 +9,11 @@ So, I decided to create this Chrome extension to fix the issue.
 ### Easiest installation method
 You can find the Piazza Dark Mode extension on the Chrome web store
 [here](https://chrome.google.com/webstore/detail/piazza-dark-mode/ogocfhdkkiikncecdelajkgnhnbpcdfp). Click "Add to Chrome"
-to start using the extension, and Piazza will default to dark mode the next time you use it. 
+to start using the extension, and Piazza will default to dark mode the next time it is opened. 
 
 ### Alternate installation method
-You could also clone the repo to get a local copy of it, and follow 
-[these instructions](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked) to add your local copy
+Another option is to clone this repo to get a local copy, and follow 
+[these instructions](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked) to add the local copy
 of the extension to Chrome. 
 
 ### Switching between light and dark mode
@@ -37,8 +37,7 @@ Here are some examples of how Piazza Dark Mode changes the appearance of Piazza
 
 
 ## Future Improvements:
-I think the biggest thing that the extension lacks is that it only works for student users of  Piazza, not TAs or instructors. 
-I haven't added this yet because I don't know if any instructors or TAs are even using the extension. 
+Currently, the extension only works well for student users of Piazza, not TAs or instructors. There are some UI elements that only instructors and TAs see, which the extension does not take into account. The reason I haven't added this is that I don't know if any instructors or TAs are even using the extension. 
 
 ## Technical Details:
 
@@ -52,7 +51,7 @@ There are three kinds of events that cause the extension to do something:
 1. **A Piazza page starts loading.** If the selected mode is dark mode, then relevant style elements are added to the page
 so that dark CSS styles will be applied. The extension does not wait for the page to finish loading to apply these styles, 
 since this would cause the page to appear light for a moment before darkening
-2. **A Piazza page finished loading.** Once the page has finished loading, we know that the menu bar at the top should exist.
+2. **A Piazza page finished loading.** Once the page has finished loading, we can be confident that the menu bar at the top should exist.
 So, at this point, the content script in charge of changing modes is injected. It adds a sun or moon icon
 to the top bar, depending on whether the user's currently selected mode is light or dark mode.
 3. **A user clicks the sun/moon icon to change modes.** If switching from light to dark mode, the relevant
