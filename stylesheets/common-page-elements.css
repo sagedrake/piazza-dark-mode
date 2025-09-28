@@ -12,6 +12,11 @@ body h2,
 	color: #e7e6e6 !important;
 }
 
+#topbar a,
+#topbarUserNameId {
+	color: white !important;
+}
+
 /**********************/
 /* Darkest Grey Background */
 #topbar #my_class_menu .dropdown-item:not(:hover),
@@ -61,9 +66,9 @@ body h2,
 .alert.alert-info,
 .alert-warning,
 .alert-primary {
-	background-color: #265983 !important;
-	border-color: #265983 !important;
-	color: #e7e6e6 !important;
+	background-color: #1370c4 !important;
+	border-color: #add3f9 !important;
+	color: #e8f3fe !important;
 }
 
 .alert.alert-warning.border,
@@ -85,7 +90,7 @@ pre {
 .btn.btn-link-text,
 .btn.btn-link,
 a {
-	color: #5992bf !important;
+	color: #78b9ec !important;
 }
 
 /* Latex edits */
