@@ -315,3 +315,32 @@ li.feed_item.unanswered.selected {
 .react-tabs__tab-list .nav-link:focus {
 	border-color: #484747 !important;
 }
+
+
+
+/* "Class At A Glance" section */
+
+.card.glance-alert.bg-warning {
+    --glance-bg: #8b3e14;
+}
+
+.card.glance-alert.text-warning,
+.card.glance-alert.text-success {
+    color: #FFF9E4 !important;
+}
+
+.card.glance-alert.bg-success {
+    --glance-bg: #195c2b !important;
+}
+
+.card.glance-alert.bg-success svg {
+	color: #c7e3ce;
+}
+
+.card.glance-alert.bg-warning svg {
+	color: #eaded8;
+}
+
+.card.glance-alert .glance-icon-wrapper {
+	background: color-mix(in srgb, currentColor, transparent 83%) !important;
+}
