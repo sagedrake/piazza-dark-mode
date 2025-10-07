@@ -19,6 +19,10 @@ strong,
 .css-1dimb5e-singleValue,
 .main-content .questions-and-answers #qanda-content article footer .update_text,
 .main-content .questions-and-answers #qanda-content article footer span,
+.main-content .questions-and-answers #qanda-content article header span,
+.main-content .questions-and-answers #qanda-content #post-header span,
+.main-content .questions-and-answers #qanda-content #post-header .post_number_copy,
+.main-content .questions-and-answers #qanda-content,
 #special-mentions,
 .text-right {
 	color: #e7e6e6 !important;
@@ -51,11 +55,9 @@ article,
 .modal-footer,
 #latexTextArea,
 div[class*="css"][class$="menu"],
-#qanda-content #teammates .new_post,
-#qanda-content #teammates #teammates_head_row .col,
-#qanda-content #teammates #teammates_head_row .first_col,
-#qanda-content #teammates .responses .write_response,
-#qanda-content #teammates .responses .response,
+#qanda-content,
+.main-content .questions-and-answers #qanda-content #post-header,
+.main-content .questions-and-answers #qanda-content .post-footer,
 #similar-posts li,
 .similar-posts,
 .popover-header,
@@ -85,6 +87,9 @@ kbd,
 }
 #react_feed #feed_list_wrapper #feed_list .bucket-header {
 	background-color: #2d2d2d !important;
+}
+hr {
+	background-color: #717171;
 }
 
 /**********************/
@@ -153,8 +158,10 @@ body h1,
 #react_feed .page_feed_tool_bar .page_feed_tool_bar_left #feed_filter_buttons .feed_filter_button,
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .metadata .timestamp,
 .main-content .questions-and-answers #qanda-content article .good_post_number,
-#main-post .helper-text {
-	color: #9f9d9d !important;
+.main-content .questions-and-answers #qanda-content .update_text,
+.helper-text,
+#react_root #history_bar .history_title {
+	color: #c8c7c7 !important;
 }
 
 /**********************/
@@ -240,10 +247,18 @@ body h1,
 /* Blue buttons/icons with white text */
 .main-content .questions-and-answers #qanda-content article .btn-action,
 #react_root .folder_selector .folder_button.selected,
-#load-all-button {
+#load-all-button,
+.btn.btn-ghost {
 	color: #e7e6e6 !important;
 	background-color: #305f85 !important;
 	border-color: #305f85 !important;
+}
+
+/******************************/
+/* Green buttons/icons with white text */
+.badge.badge-success {
+    background: #195c2b;
+    color: #ebfdf0;
 }
 
 /******************************/
@@ -257,6 +272,15 @@ body h1,
 #similar-posts li a,
 #create-post #main-post a {
 	color: #5992bf !important;
+}
+
+/**********************************************/
+/* Student and Instructor Answers */
+.main-content .questions-and-answers #qanda-content article[data-id=i_answer].answer {
+	background-color: #373325 !important;
+}
+.main-content .questions-and-answers #qanda-content article[data-id=s_answer].answer {
+	background-color: #213521 !important;
 }
 
 /**********************/
