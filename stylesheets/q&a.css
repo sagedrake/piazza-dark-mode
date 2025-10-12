@@ -7,7 +7,6 @@ body,
 :root,
 .icon-font,
 article,
-label,
 #create-post #main-post .btn.btn-link-text,
 #latexTextArea,
 #latexPreviewRender,
@@ -64,7 +63,8 @@ div[class*="css"][class$="menu"],
 .popover,
 .main-content .questions-and-answers #qanda-content article .content .followup_content_wrapper .link_copied,
 #special-mentions #regular .content,
-#react_feed #feed_list_wrapper #feed_list ul li.feed_item .feed_item_dropdown_selector > .dropdown-menu > .dropdown-item .link_copied {
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .feed_item_dropdown_selector > .dropdown-menu > .dropdown-item .link_copied,
+.main-content .questions-and-answers #qanda-content article .text-danger {
 	background-color: #232323 !important;
 }
 
@@ -178,6 +178,17 @@ body h1,
 	accent-color: #265983 !important;
 	background-color: #232323 !important;
 }
+
+input.custom-control-input:checked~.custom-control-label::before {
+	background-color: #265983 !important;
+}
+
+/* TODO: why doesnt this work */
+input[type="checkbox"][disabled] {
+  filter: invert(100%) hue-rotate(18deg) brightness(5) !important;
+}
+
+
 
 /**********************/
 /* White icons */
@@ -295,7 +306,8 @@ body h1,
 	color: #5fd2ee !important;
 }
 
-#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.unresolved_followups {
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.unresolved_followups,
+.main-content .questions-and-answers #qanda-content article .text-danger {
 	color: #f17e84 !important;
 }
 
