@@ -64,7 +64,10 @@ div[class*="css"][class$="menu"],
 .main-content .questions-and-answers #qanda-content article .content .followup_content_wrapper .link_copied,
 #special-mentions #regular .content,
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .feed_item_dropdown_selector > .dropdown-menu > .dropdown-item .link_copied,
-.main-content .questions-and-answers #qanda-content article .text-danger {
+.main-content .questions-and-answers #qanda-content article .text-danger,
+#content-holder,
+#react_feed .page_feed_tool_bar,
+#react_feed #feed_list_wrapper #feed_list {
 	background-color: #232323 !important;
 }
 
@@ -118,7 +121,8 @@ body h1,
 .similar-posts,
 .popover-header,
 .popover,
-.card {
+.card,
+#feed_list_wrapper {
 	border-color: #484747 !important;
 }
 .bs-popover-right > .arrow::after,
@@ -160,7 +164,8 @@ body h1,
 .main-content .questions-and-answers #qanda-content article .good_post_number,
 .main-content .questions-and-answers #qanda-content .update_text,
 .helper-text,
-#react_root #history_bar .history_title {
+#react_root #history_bar .history_title,
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content .title {
 	color: #c8c7c7 !important;
 }
 
@@ -297,16 +302,6 @@ input[type="checkbox"][disabled] {
 /**********************/
 /* Colours */
 
-#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.instructor_endorsed,
-.instructor-endorsement {
-	color: #f69b51 !important;
-}
-
-#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.open_teammate_searches {
-	color: #5fd2ee !important;
-}
-
-#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content ul.messages li.unresolved_followups,
 .main-content .questions-and-answers #qanda-content article .text-danger {
 	color: #f17e84 !important;
 }
