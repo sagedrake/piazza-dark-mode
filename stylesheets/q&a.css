@@ -165,7 +165,8 @@ body h1,
 .main-content .questions-and-answers #qanda-content .update_text,
 .helper-text,
 #react_root #history_bar .history_title,
-#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content .title {
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content .title,
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content .title .private-icon {
 	color: #c8c7c7 !important;
 }
 
@@ -187,12 +188,6 @@ body h1,
 input.custom-control-input:checked~.custom-control-label::before {
 	background-color: #265983 !important;
 }
-
-/* TODO: why doesnt this work */
-input[type="checkbox"][disabled] {
-  filter: invert(100%) hue-rotate(18deg) brightness(5) !important;
-}
-
 
 
 /**********************/
@@ -271,10 +266,19 @@ input[type="checkbox"][disabled] {
 }
 
 /******************************/
-/* Green buttons/icons with white text */
-.badge.badge-success {
+/* Green with light green text */
+.badge.badge-success,
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item div.content ul.messages li.instructor_endorsed {
     background: #195c2b;
     color: #ebfdf0;
+}
+
+/******************************/
+/* Brown with light orange text */
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item div.content ul.messages li.unresolved_followups,
+.badge.badge-warning {
+	background-color: #8b3e14;
+	color: #fff9e4
 }
 
 /******************************/
@@ -284,9 +288,10 @@ input[type="checkbox"][disabled] {
 }
 
 /**********************************************/
-/* Links */
+/* Light Blue text */
 #similar-posts li a,
-#create-post #main-post a {
+#create-post #main-post a,
+#react_feed .page_feed_tool_bar .dropdown-toggle {
 	color: #5992bf !important;
 }
 
