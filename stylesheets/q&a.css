@@ -23,7 +23,8 @@ strong,
 .main-content .questions-and-answers #qanda-content #post-header .post_number_copy,
 .main-content .questions-and-answers #qanda-content,
 #special-mentions,
-.text-right {
+.text-right,
+#main-post label {
 	color: #e7e6e6 !important;
 }
 
@@ -67,7 +68,8 @@ div[class*="css"][class$="menu"],
 .main-content .questions-and-answers #qanda-content article .text-danger,
 #content-holder,
 #react_feed .page_feed_tool_bar,
-#react_feed #feed_list_wrapper #feed_list {
+#react_feed #feed_list_wrapper #feed_list,
+.bg-white.align-items-baseline {
 	background-color: #232323 !important;
 }
 
@@ -189,6 +191,13 @@ input.custom-control-input:checked~.custom-control-label::before {
 	background-color: #265983 !important;
 }
 
+
+/**********************/
+/* Primary Colour Dark Background */
+#main-post .post-type-box.active
+{
+ 	background: color-mix(in srgb, var(--primary) 20%, #232323);
+}
 
 /**********************/
 /* White icons */
