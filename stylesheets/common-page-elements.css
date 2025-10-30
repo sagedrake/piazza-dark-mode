@@ -66,9 +66,9 @@ body h2,
 .alert.alert-info,
 .alert-warning,
 .alert-primary {
-	background-color: #1370c4 !important;
-	border-color: #add3f9 !important;
-	color: #e8f3fe !important;
+	background-color: color-mix(in srgb, var(--primary) 80%, #232323) !important;
+	border-color: color-mix(in srgb, var(--primary) 5%, white) !important;
+	color: color-mix(in srgb, var(--primary) 5%, white) !important;
 }
 
 .alert.alert-warning.border,
