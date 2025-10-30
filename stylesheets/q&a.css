@@ -24,7 +24,8 @@ strong,
 .main-content .questions-and-answers #qanda-content,
 #special-mentions,
 .text-right,
-#main-post label {
+#main-post label,
+#create-post #main-post .dropdown .dropdown-menu .dropdown-item {
 	color: #e7e6e6 !important;
 }
 
@@ -124,7 +125,8 @@ body h1,
 .popover-header,
 .popover,
 .card,
-#feed_list_wrapper {
+#feed_list_wrapper,
+.badge.border {
 	border-color: #484747 !important;
 }
 .bs-popover-right > .arrow::after,
@@ -168,7 +170,9 @@ body h1,
 .helper-text,
 #react_root #history_bar .history_title,
 #react_feed #feed_list_wrapper #feed_list ul li.feed_item .content .title,
-#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content .title .private-icon {
+#react_feed #feed_list_wrapper #feed_list ul li.feed_item .content .title .private-icon,
+#main-post p.helper-text,
+input.create-post__input {
 	color: #c8c7c7 !important;
 }
 
@@ -183,12 +187,11 @@ body h1,
 /* Radio buttons */
 .form-check-input,
 .custom-control-label::before {
-	accent-color: #265983 !important;
-	background-color: #232323 !important;
+	background-color: #232323;
 }
 
 input.custom-control-input:checked~.custom-control-label::before {
-	background-color: #265983 !important;
+	background-color: var(--primary) !important;
 }
 
 
@@ -212,7 +215,9 @@ input.custom-control-input:checked~.custom-control-label::before {
 
 /**********************/
 /* Light grey icons */
-.homescreen_close_button {
+.homescreen_close_button,
+#create-post button.btn svg,
+.create-post__indicator svg {
 	color: #9f9d9d !important;
 }
 
