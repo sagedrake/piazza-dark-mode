@@ -2,8 +2,10 @@
 
 ## Project Motivation
 Piazza is a website for students to ask questions in a course-specific forum where instructors and students can answer. Many of the
-courses I'm taking at UBC use this platform, and it does not have a built-in dark mode. The light colours of the website irritated me. 
-So, I decided to create this Chrome extension to fix the issue.
+courses I'm taking at UBC use this platform. I did not like that Piazza had no built-in dark mode, so I decided to create a Chrome extension to fix the issue.
+
+## Project Status
+I first released the extension in July 2023 and maintained it until Oct 2025. As of Oct 31st 2025, Piazza now has a built-in dark mode feature, so I'm no longer maintaining this project.
 
 ## How to Use
 ### Easiest installation method
